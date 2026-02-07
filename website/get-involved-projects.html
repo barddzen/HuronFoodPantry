@@ -1,0 +1,437 @@
+<!-- HURON HELPING HANDS FOOD PANTRY - PROJECTS PAGE (SIMPLY GIVE) -->
+<!-- Paste this into a Squarespace Code Block -->
+
+<style>
+  .hhh-projects {
+    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    color: #333 !important;
+    line-height: 1.7 !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+  }
+  
+  .hhh-projects h1,
+  .hhh-projects h1 * {
+    color: #1E3A5F !important;
+    font-size: 2.2em !important;
+    margin-bottom: 15px !important;
+    text-align: center !important;
+  }
+  
+  .hhh-projects .subtitle,
+  .hhh-projects .subtitle * {
+    text-align: center !important;
+    font-size: 1.2em !important;
+    color: #555 !important;
+    margin-bottom: 35px !important;
+  }
+  
+  .hhh-projects h2,
+  .hhh-projects h2 * {
+    color: #1E3A5F !important;
+    font-size: 1.5em !important;
+    margin: 40px 0 20px 0 !important;
+    padding-bottom: 10px !important;
+    border-bottom: 2px solid #E2E8F0 !important;
+  }
+  
+  .hhh-projects p,
+  .hhh-projects p * {
+    font-size: 1.1em !important;
+    margin-bottom: 18px !important;
+    color: #444 !important;
+  }
+  
+  .hhh-campaign-hero {
+    background: linear-gradient(135deg, #0047AB 0%, #1E5BC6 100%) !important;
+    color: white !important;
+    padding: 45px !important;
+    border-radius: 12px !important;
+    text-align: center !important;
+    margin: 30px 0 !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  
+  .hhh-campaign-hero::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important;
+  }
+  
+  .hhh-campaign-hero * {
+    position: relative !important;
+  }
+  
+  .hhh-campaign-hero .campaign-badge,
+  .hhh-campaign-hero .campaign-badge * {
+    background: #C41E3A !important;
+    color: white !important;
+    padding: 8px 20px !important;
+    border-radius: 20px !important;
+    font-size: 0.9em !important;
+    font-weight: 600 !important;
+    display: inline-block !important;
+    margin-bottom: 20px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+  }
+  
+  .hhh-campaign-hero h2,
+  .hhh-campaign-hero h2 * {
+    font-size: 2em !important;
+    margin: 0 0 15px 0 !important;
+    border: none !important;
+    color: white !important;
+    padding: 0 !important;
+  }
+  
+  .hhh-campaign-hero .dates,
+  .hhh-campaign-hero .dates * {
+    font-size: 1.3em !important;
+    margin-bottom: 25px !important;
+    opacity: 0.95 !important;
+    color: white !important;
+  }
+  
+  .hhh-campaign-hero p,
+  .hhh-campaign-hero p * {
+    color: rgba(255,255,255,0.95) !important;
+    font-size: 1.1em !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+  }
+  
+  .hhh-double-match {
+    background: linear-gradient(135deg, #C41E3A 0%, #E53E3E 100%) !important;
+    color: white !important;
+    padding: 35px !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+    margin: 35px 0 !important;
+  }
+  
+  .hhh-double-match h3,
+  .hhh-double-match h3 * {
+    font-size: 1.6em !important;
+    margin: 0 0 15px 0 !important;
+    color: white !important;
+  }
+  
+  .hhh-double-match .match-dates,
+  .hhh-double-match .match-dates * {
+    font-size: 1.8em !important;
+    font-weight: 700 !important;
+    margin: 15px 0 !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+    color: white !important;
+  }
+  
+  .hhh-double-match p,
+  .hhh-double-match p * {
+    color: rgba(255,255,255,0.95) !important;
+    font-size: 1.1em !important;
+    margin: 15px 0 0 0 !important;
+  }
+  
+  .hhh-how-it-works {
+    background: #F8F9FA !important;
+    padding: 35px !important;
+    border-radius: 8px !important;
+    margin: 35px 0 !important;
+  }
+  
+  .hhh-how-it-works h3,
+  .hhh-how-it-works h3 * {
+    color: #1E3A5F !important;
+    font-size: 1.4em !important;
+    margin: 0 0 25px 0 !important;
+    text-align: center !important;
+  }
+  
+  .hhh-steps {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+    justify-content: center !important;
+  }
+  
+  .hhh-step {
+    flex: 1 !important;
+    min-width: 200px !important;
+    max-width: 250px !important;
+    text-align: center !important;
+    padding: 20px !important;
+    background: white !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+  }
+  
+  .hhh-step .step-number,
+  .hhh-step .step-number * {
+    width: 50px !important;
+    height: 50px !important;
+    background: #1E3A5F !important;
+    color: white !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.5em !important;
+    font-weight: 700 !important;
+    margin: 0 auto 15px auto !important;
+  }
+  
+  .hhh-step h4,
+  .hhh-step h4 * {
+    color: #1E3A5F !important;
+    margin: 0 0 10px 0 !important;
+    font-size: 1.1em !important;
+  }
+  
+  .hhh-step p,
+  .hhh-step p * {
+    font-size: 0.95em !important;
+    margin: 0 !important;
+    color: #555 !important;
+  }
+  
+  .hhh-impact-box {
+    background: white !important;
+    border: 2px solid #1E3A5F !important;
+    border-radius: 8px !important;
+    padding: 30px !important;
+    text-align: center !important;
+    margin: 35px 0 !important;
+  }
+  
+  .hhh-impact-box h3,
+  .hhh-impact-box h3 * {
+    color: #1E3A5F !important;
+    margin: 0 0 20px 0 !important;
+    font-size: 1.3em !important;
+  }
+  
+  .hhh-impact-examples {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+    justify-content: center !important;
+  }
+  
+  .hhh-impact-item {
+    background: #F8F9FA !important;
+    padding: 20px !important;
+    border-radius: 8px !important;
+    min-width: 180px !important;
+  }
+  
+  .hhh-impact-item .amount,
+  .hhh-impact-item .amount * {
+    font-size: 1.8em !important;
+    font-weight: 700 !important;
+    color: #1E3A5F !important;
+    display: block !important;
+  }
+  
+  .hhh-impact-item .result,
+  .hhh-impact-item .result * {
+    font-size: 1em !important;
+    color: #555 !important;
+    margin-top: 5px !important;
+  }
+  
+  .hhh-impact-item .result strong {
+    color: #C41E3A !important;
+  }
+  
+  .hhh-store-info {
+    background: #1E3A5F !important;
+    color: white !important;
+    padding: 30px !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+    margin: 35px 0 !important;
+  }
+  
+  .hhh-store-info h3,
+  .hhh-store-info h3 * {
+    margin: 0 0 15px 0 !important;
+    font-size: 1.3em !important;
+    color: white !important;
+  }
+  
+  .hhh-store-info p,
+  .hhh-store-info p * {
+    color: rgba(255,255,255,0.9) !important;
+    margin: 10px 0 !important;
+  }
+  
+  .hhh-store-info strong {
+    color: white !important;
+  }
+  
+  .hhh-other-projects {
+    margin-top: 50px !important;
+  }
+  
+  .hhh-project-card {
+    background: white !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 8px !important;
+    padding: 25px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+  }
+  
+  .hhh-project-card h3,
+  .hhh-project-card h3 * {
+    color: #1E3A5F !important;
+    margin: 0 0 15px 0 !important;
+    font-size: 1.2em !important;
+  }
+  
+  .hhh-project-card p,
+  .hhh-project-card p * {
+    font-size: 1em !important;
+    margin: 0 !important;
+    color: #444 !important;
+  }
+  
+  .hhh-fine-print {
+    font-size: 0.9em !important;
+    color: #666 !important;
+    background: #F8F9FA !important;
+    padding: 20px !important;
+    border-radius: 8px !important;
+    margin-top: 35px !important;
+  }
+  
+  .hhh-fine-print p,
+  .hhh-fine-print p * {
+    font-size: 0.9em !important;
+    margin: 0 !important;
+    color: #666 !important;
+  }
+</style>
+
+<div class="hhh-projects">
+  
+  <h1 style="color: #1E3A5F !important;">Current Projects &amp; Campaigns</h1>
+  <p class="subtitle" style="color: #555 !important;">Join us in making a bigger impact through these special initiatives</p>
+  
+  <!-- SIMPLY GIVE CAMPAIGN -->
+  <div class="hhh-campaign-hero">
+    <span class="campaign-badge" style="color: white !important; background: #C41E3A !important;">🎉 Now Active</span>
+    <h2 style="color: white !important; border: none !important;">Meijer Simply Give</h2>
+    <p class="dates" style="color: white !important;">December 28, 2025 – March 28, 2026</p>
+    <p style="color: white !important;">Help stock our shelves by purchasing a $10 Simply Give donation card at your local Meijer. It's one of the easiest ways to make a direct impact on families in our community!</p>
+  </div>
+  
+  <!-- DOUBLE MATCH DAYS -->
+  <div class="hhh-double-match">
+    <h3 style="color: white !important;">⭐ Double Match Days ⭐</h3>
+    <p style="color: white !important;">On these special Saturdays, Meijer will DOUBLE their match!</p>
+    <div class="match-dates" style="color: white !important;">March 7 &amp; March 21, 2026</div>
+    <p style="color: white !important;">Your $10 becomes $30 for our pantry. That's TRIPLE the impact!</p>
+  </div>
+  
+  <!-- HOW IT WORKS -->
+  <div class="hhh-how-it-works">
+    <h3 style="color: #1E3A5F !important;">How Simply Give Works</h3>
+    <div class="hhh-steps">
+      <div class="hhh-step">
+        <div class="step-number" style="color: white !important; background: #1E3A5F !important;">1</div>
+        <h4 style="color: #1E3A5F !important;">Shop at Meijer</h4>
+        <p style="color: #555 !important;">Visit your local participating Meijer store during the campaign.</p>
+      </div>
+      <div class="hhh-step">
+        <div class="step-number" style="color: white !important; background: #1E3A5F !important;">2</div>
+        <h4 style="color: #1E3A5F !important;">Buy a $10 Card</h4>
+        <p style="color: #555 !important;">Ask the cashier to add a $10 Simply Give donation card to your order.</p>
+      </div>
+      <div class="hhh-step">
+        <div class="step-number" style="color: white !important; background: #1E3A5F !important;">3</div>
+        <h4 style="color: #1E3A5F !important;">Meijer Matches</h4>
+        <p style="color: #555 !important;">Meijer converts your donation into a food-only gift card and matches it.</p>
+      </div>
+      <div class="hhh-step">
+        <div class="step-number" style="color: white !important; background: #1E3A5F !important;">4</div>
+        <h4 style="color: #1E3A5F !important;">We Get Groceries</h4>
+        <p style="color: #555 !important;">We receive the gift cards and use them to stock our shelves with nutritious food!</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- YOUR IMPACT -->
+  <div class="hhh-impact-box">
+    <h3 style="color: #1E3A5F !important;">See Your Impact</h3>
+    <div class="hhh-impact-examples">
+      <div class="hhh-impact-item">
+        <span class="amount" style="color: #1E3A5F !important;">$10</span>
+        <span class="result" style="color: #555 !important;">becomes <strong style="color: #C41E3A !important;">$20</strong><br>during campaign</span>
+      </div>
+      <div class="hhh-impact-item">
+        <span class="amount" style="color: #1E3A5F !important;">$10</span>
+        <span class="result" style="color: #555 !important;">becomes <strong style="color: #C41E3A !important;">$30</strong><br>on Double Match Days!</span>
+      </div>
+      <div class="hhh-impact-item">
+        <span class="amount" style="color: #1E3A5F !important;">$50</span>
+        <span class="result" style="color: #555 !important;">becomes <strong style="color: #C41E3A !important;">$150</strong><br>on Double Match Days!</span>
+      </div>
+    </div>
+    <p style="margin-top: 25px; color: #555 !important;">Since 2008, Meijer Simply Give has generated over <strong>$100 million</strong> for food pantries across the Midwest!</p>
+  </div>
+  
+  <!-- STORE INFO -->
+  <div class="hhh-store-info">
+    <h3 style="color: white !important;">📍 Where to Purchase</h3>
+    <p style="color: white !important;">Purchase Simply Give cards at your participating local Meijer store.</p>
+    <p style="color: white !important;">Be sure to mention <strong style="color: white !important;">Huron Helping Hands Food Pantry</strong> as your designated pantry!</p>
+    <p style="margin-top: 15px; font-size: 0.95em; color: rgba(255,255,255,0.9) !important;">Contact us at 419-616-0088 if you need help finding a participating location.</p>
+  </div>
+  
+  <!-- OTHER WAYS TO PARTICIPATE -->
+  <h2 style="color: #1E3A5F !important;">Other Ways to Participate</h2>
+  
+  <div class="hhh-project-card">
+    <h3 style="color: #1E3A5F !important;">🏢 Business &amp; Group Campaigns</h3>
+    <p style="color: #444 !important;">Rally your coworkers, church group, or organization to participate in Simply Give! Coordinate a group shopping trip on Double Match Day, or collect donations and have one person purchase cards on behalf of the group. Contact us for more information on organizing a group effort.</p>
+  </div>
+  
+  <div class="hhh-project-card">
+    <h3 style="color: #1E3A5F !important;">📣 Spread the Word</h3>
+    <p style="color: #444 !important;">Share this campaign with friends, family, and on social media. The more people who know about Simply Give, the more food we can provide to families in need. Every card purchased makes a difference!</p>
+  </div>
+  
+  <div class="hhh-project-card">
+    <h3 style="color: #1E3A5F !important;">🗓️ Mark Your Calendar</h3>
+    <p style="color: #444 !important;">Set reminders for the Double Match Days (March 7 &amp; 21, 2026). These are the best days to maximize your contribution — your $10 becomes $30 for our pantry!</p>
+  </div>
+  
+  <!-- OTHER INITIATIVES -->
+  <div class="hhh-other-projects">
+    <h2 style="color: #1E3A5F !important;">Year-Round Initiatives</h2>
+    
+    <div class="hhh-project-card">
+      <h3 style="color: #1E3A5F !important;">🍂 Holiday Food Drives</h3>
+      <p style="color: #444 !important;">Throughout the year, we coordinate special food drives for Thanksgiving, Christmas, and other holidays to ensure every family can celebrate with a meal. Contact us to learn about upcoming drives or to organize one in your community.</p>
+    </div>
+    
+    <div class="hhh-project-card">
+      <h3 style="color: #1E3A5F !important;">🤝 Community Partnerships</h3>
+      <p style="color: #444 !important;">We're always looking for community partners — local businesses, churches, schools, and civic organizations — who want to make a difference. Whether it's hosting a food drive, sponsoring supplies, or volunteering as a group, there are many ways to get involved.</p>
+    </div>
+  </div>
+  
+  <!-- FINE PRINT -->
+  <div class="hhh-fine-print">
+    <p style="color: #666 !important;"><strong>About Simply Give Double Match:</strong> For every $10 Simply Give card added to a customer order on Double Match Days, Meijer will add $20, resulting in a total $30 contribution. Purchases up to $5,000 on Double Match Day will be matched by Meijer up to a maximum donation of $10,000 per pantry/campaign.</p>
+  </div>
+  
+</div>

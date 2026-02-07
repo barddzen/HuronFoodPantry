@@ -1,0 +1,397 @@
+<!-- HURON HELPING HANDS FOOD PANTRY - EVENTS PAGE -->
+<!-- Paste this into a Squarespace Code Block -->
+
+<style>
+  .hhh-events {
+    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    color: #333 !important;
+    line-height: 1.7 !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+  }
+  
+  .hhh-events h1,
+  .hhh-events h1 * {
+    color: #1E3A5F !important;
+    font-size: 2.2em !important;
+    margin-bottom: 15px !important;
+    text-align: center !important;
+  }
+  
+  .hhh-events .subtitle,
+  .hhh-events .subtitle * {
+    text-align: center !important;
+    font-size: 1.2em !important;
+    color: #555 !important;
+    margin-bottom: 35px !important;
+  }
+  
+  .hhh-events h2,
+  .hhh-events h2 * {
+    color: #1E3A5F !important;
+    font-size: 1.5em !important;
+    margin: 40px 0 20px 0 !important;
+    padding-bottom: 10px !important;
+    border-bottom: 2px solid #E2E8F0 !important;
+  }
+  
+  .hhh-featured-event {
+    background: linear-gradient(135deg, #C41E3A 0%, #E53E3E 100%) !important;
+    color: white !important;
+    padding: 35px !important;
+    border-radius: 12px !important;
+    margin: 30px 0 !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 30px !important;
+    align-items: center !important;
+  }
+  
+  .hhh-featured-event .date-badge {
+    background: white !important;
+    color: #C41E3A !important;
+    padding: 20px !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+    min-width: 100px !important;
+  }
+  
+  .hhh-featured-event .date-badge .month,
+  .hhh-featured-event .date-badge .month * {
+    font-size: 0.9em !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    color: #C41E3A !important;
+  }
+  
+  .hhh-featured-event .date-badge .day,
+  .hhh-featured-event .date-badge .day * {
+    font-size: 2.5em !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    margin: 5px 0 !important;
+    color: #C41E3A !important;
+  }
+  
+  .hhh-featured-event .date-badge .year,
+  .hhh-featured-event .date-badge .year * {
+    font-size: 0.85em !important;
+    color: #C41E3A !important;
+  }
+  
+  .hhh-featured-event .event-details {
+    flex: 1 !important;
+    min-width: 250px !important;
+  }
+  
+  .hhh-featured-event .event-tag,
+  .hhh-featured-event .event-tag * {
+    background: rgba(255,255,255,0.2) !important;
+    padding: 4px 12px !important;
+    border-radius: 4px !important;
+    font-size: 0.85em !important;
+    display: inline-block !important;
+    margin-bottom: 10px !important;
+    color: white !important;
+  }
+  
+  .hhh-featured-event h3,
+  .hhh-featured-event h3 * {
+    font-size: 1.5em !important;
+    margin: 0 0 10px 0 !important;
+    color: white !important;
+  }
+  
+  .hhh-featured-event p,
+  .hhh-featured-event p * {
+    margin: 0 !important;
+    opacity: 0.95 !important;
+    color: white !important;
+  }
+  
+  .hhh-schedule-section {
+    background: #F8F9FA !important;
+    padding: 35px !important;
+    border-radius: 8px !important;
+    margin: 35px 0 !important;
+  }
+  
+  .hhh-schedule-section h3,
+  .hhh-schedule-section h3 * {
+    color: #1E3A5F !important;
+    margin: 0 0 25px 0 !important;
+    font-size: 1.3em !important;
+    text-align: center !important;
+  }
+  
+  .hhh-weekly-schedule {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 20px !important;
+  }
+  
+  .hhh-day-card {
+    background: white !important;
+    padding: 25px !important;
+    border-radius: 8px !important;
+    border-left: 4px solid #1E3A5F !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+  }
+  
+  .hhh-day-card h4,
+  .hhh-day-card h4 * {
+    color: #1E3A5F !important;
+    margin: 0 0 10px 0 !important;
+    font-size: 1.15em !important;
+  }
+  
+  .hhh-day-card .time,
+  .hhh-day-card .time * {
+    font-size: 1.2em !important;
+    font-weight: 600 !important;
+    color: #333 !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .hhh-day-card .note,
+  .hhh-day-card .note * {
+    font-size: 0.9em !important;
+    color: #666 !important;
+    font-style: italic !important;
+  }
+  
+  .hhh-event-list {
+    display: grid !important;
+    gap: 20px !important;
+    margin: 25px 0 !important;
+  }
+  
+  .hhh-event-card {
+    background: white !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 8px !important;
+    padding: 25px !important;
+    display: flex !important;
+    gap: 20px !important;
+    align-items: flex-start !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+  }
+  
+  .hhh-event-card .date-box {
+    background: #1E3A5F !important;
+    color: white !important;
+    padding: 15px !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+    min-width: 70px !important;
+    flex-shrink: 0 !important;
+  }
+  
+  .hhh-event-card .date-box .month,
+  .hhh-event-card .date-box .month * {
+    font-size: 0.8em !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    color: white !important;
+  }
+  
+  .hhh-event-card .date-box .day,
+  .hhh-event-card .date-box .day * {
+    font-size: 1.8em !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    color: white !important;
+  }
+  
+  .hhh-event-card .event-info {
+    flex: 1 !important;
+  }
+  
+  .hhh-event-card .event-info h4,
+  .hhh-event-card .event-info h4 * {
+    color: #1E3A5F !important;
+    margin: 0 0 8px 0 !important;
+    font-size: 1.15em !important;
+  }
+  
+  .hhh-event-card .event-info p,
+  .hhh-event-card .event-info p * {
+    margin: 0 0 10px 0 !important;
+    font-size: 0.95em !important;
+    color: #555 !important;
+  }
+  
+  .hhh-event-card .event-meta,
+  .hhh-event-card .event-meta * {
+    font-size: 0.9em !important;
+    color: #666 !important;
+  }
+  
+  .hhh-event-card .event-meta span {
+    margin-right: 15px !important;
+  }
+  
+  .hhh-no-events {
+    background: #F8F9FA !important;
+    padding: 40px !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+    color: #666 !important;
+  }
+  
+  .hhh-no-events p,
+  .hhh-no-events p * {
+    margin: 0 !important;
+    color: #666 !important;
+  }
+  
+  .hhh-cta-section {
+    background: #1E3A5F !important;
+    color: white !important;
+    padding: 35px !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+    margin: 40px 0 !important;
+  }
+  
+  .hhh-cta-section h3,
+  .hhh-cta-section h3 * {
+    margin: 0 0 15px 0 !important;
+    font-size: 1.4em !important;
+    color: white !important;
+  }
+  
+  .hhh-cta-section p,
+  .hhh-cta-section p * {
+    margin: 0 0 20px 0 !important;
+    opacity: 0.95 !important;
+    color: white !important;
+  }
+  
+  .hhh-cta-section .cta-btn,
+  .hhh-cta-section .cta-btn * {
+    display: inline-block !important;
+    background: #C41E3A !important;
+    color: white !important;
+    padding: 12px 28px !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .hhh-cta-section .cta-btn:hover {
+    background: #A01830 !important;
+    transform: translateY(-2px) !important;
+  }
+</style>
+
+<div class="hhh-events">
+  
+  <h1 style="color: #1E3A5F !important;">Events &amp; Calendar</h1>
+  <p class="subtitle" style="color: #555 !important;">Join us for special events and our regular distribution schedule</p>
+  
+  <!-- FEATURED EVENT - Simply Give Double Match Day -->
+  <div class="hhh-featured-event">
+    <div class="date-badge">
+      <div class="month" style="color: #C41E3A !important;">Mar</div>
+      <div class="day" style="color: #C41E3A !important;">7</div>
+      <div class="year" style="color: #C41E3A !important;">2026</div>
+    </div>
+    <div class="event-details">
+      <span class="event-tag" style="color: white !important;">⭐ Special Event</span>
+      <h3 style="color: white !important;">Simply Give Double Match Day</h3>
+      <p style="color: white !important;">Your $10 Simply Give purchase at Meijer becomes $30 for our pantry! Don't miss this opportunity to triple your impact. A second Double Match Day is March 21.</p>
+    </div>
+  </div>
+  
+  <!-- REGULAR SCHEDULE -->
+  <div class="hhh-schedule-section">
+    <h3 style="color: #1E3A5F !important;">📅 Weekly Distribution Schedule</h3>
+    <div class="hhh-weekly-schedule">
+      <div class="hhh-day-card">
+        <h4 style="color: #1E3A5F !important;">Wednesday</h4>
+        <div class="time" style="color: #333 !important;">9:00 AM – 3:00 PM</div>
+        <div class="note" style="color: #666 !important;">Please arrive by 2:30 PM</div>
+      </div>
+      <div class="hhh-day-card">
+        <h4 style="color: #1E3A5F !important;">Thursday</h4>
+        <div class="time" style="color: #333 !important;">10:00 AM – 2:00 PM</div>
+        <div class="note" style="color: #666 !important;">Please arrive by 1:30 PM</div>
+      </div>
+    </div>
+    <p style="text-align: center; margin-top: 20px; color: #555 !important;">
+      <strong>By Appointment:</strong> Call 419-366-0524 to schedule outside regular hours
+    </p>
+  </div>
+  
+  <h2 style="color: #1E3A5F !important;">Upcoming Events</h2>
+  
+  <div class="hhh-event-list">
+    
+    <!-- Event 1 -->
+    <div class="hhh-event-card">
+      <div class="date-box">
+        <div class="month" style="color: white !important;">Mar</div>
+        <div class="day" style="color: white !important;">7</div>
+      </div>
+      <div class="event-info">
+        <h4 style="color: #1E3A5F !important;">Simply Give Double Match Day #1</h4>
+        <p style="color: #555 !important;">Shop at your local Meijer and purchase Simply Give cards. Meijer will double match every $10 card, turning it into $30 for our pantry!</p>
+        <div class="event-meta" style="color: #666 !important;">
+          <span>📍 Participating Meijer Stores</span>
+          <span>⏰ All Day</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Event 2 -->
+    <div class="hhh-event-card">
+      <div class="date-box">
+        <div class="month" style="color: white !important;">Mar</div>
+        <div class="day" style="color: white !important;">21</div>
+      </div>
+      <div class="event-info">
+        <h4 style="color: #1E3A5F !important;">Simply Give Double Match Day #2</h4>
+        <p style="color: #555 !important;">Second chance to triple your impact! Every $10 Simply Give card becomes $30 for families in need.</p>
+        <div class="event-meta" style="color: #666 !important;">
+          <span>📍 Participating Meijer Stores</span>
+          <span>⏰ All Day</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Event 3 -->
+    <div class="hhh-event-card">
+      <div class="date-box">
+        <div class="month" style="color: white !important;">Mar</div>
+        <div class="day" style="color: white !important;">28</div>
+      </div>
+      <div class="event-info">
+        <h4 style="color: #1E3A5F !important;">Simply Give Winter Campaign Ends</h4>
+        <p style="color: #555 !important;">Last day to purchase Simply Give cards for the Winter 2026 campaign. Thank you to everyone who contributed!</p>
+        <div class="event-meta" style="color: #666 !important;">
+          <span>📍 Participating Meijer Stores</span>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- PLACEHOLDER FOR MORE EVENTS -->
+  <h2 style="color: #1E3A5F !important;">Community Events</h2>
+  
+  <div class="hhh-no-events">
+    <p style="color: #666 !important;">🗓️ Check back soon for upcoming community events, food drives, and volunteer opportunities.</p>
+    <p style="margin-top: 15px !important; color: #666 !important;">Follow us on <a href="https://www.facebook.com/profile.php?id=100067649997052" target="_blank" style="color: #1E3A5F !important;">Facebook</a> for the latest announcements!</p>
+  </div>
+  
+  <!-- CTA SECTION -->
+  <div class="hhh-cta-section">
+    <h3 style="color: white !important;">Want to Host an Event?</h3>
+    <p style="color: white !important;">Interested in organizing a food drive, fundraiser, or community event to benefit our pantry?</p>
+    <a href="mailto:huronfoodpantry@gmail.com?subject=Event%20Partnership%20Inquiry" class="cta-btn" style="color: white !important; background: #C41E3A !important;">Contact Us</a>
+  </div>
+  
+</div>

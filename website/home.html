@@ -1,0 +1,328 @@
+<!-- HURON HELPING HANDS FOOD PANTRY - HOME PAGE -->
+<!-- Paste this into a Squarespace Code Block -->
+
+<style>
+  .hhh-home {
+    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    color: #333 !important;
+    line-height: 1.6 !important;
+  }
+  
+  .hhh-hero {
+    background: linear-gradient(135deg, #1E3A5F 0%, #2C5282 100%) !important;
+    color: white !important;
+    padding: 60px 30px !important;
+    text-align: center !important;
+    border-radius: 8px !important;
+    margin-bottom: 40px !important;
+  }
+  
+  .hhh-hero h1,
+  .hhh-hero h1 * {
+    font-size: 2.5em !important;
+    margin-bottom: 10px !important;
+    font-weight: 700 !important;
+    color: white !important;
+  }
+  
+  .hhh-hero .tagline,
+  .hhh-hero .tagline * {
+    font-size: 1.3em !important;
+    opacity: 0.95 !important;
+    margin-bottom: 15px !important;
+    color: white !important;
+  }
+  
+  .hhh-hero .established,
+  .hhh-hero .established * {
+    font-size: 1.1em !important;
+    opacity: 0.85 !important;
+    margin-bottom: 25px !important;
+    color: white !important;
+  }
+  
+  .hhh-hours-box {
+    background: rgba(255,255,255,0.15) !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    display: inline-block !important;
+    margin: 20px 0 !important;
+  }
+  
+  .hhh-hours-box h3,
+  .hhh-hours-box h3 * {
+    margin: 0 0 15px 0 !important;
+    font-size: 1.2em !important;
+    color: white !important;
+  }
+  
+  .hhh-hours-box p,
+  .hhh-hours-box p * {
+    margin: 8px 0 !important;
+    font-size: 1.05em !important;
+    color: white !important;
+  }
+  
+  .hhh-hours-box .arrive-by,
+  .hhh-hours-box .arrive-by * {
+    font-size: 0.9em !important;
+    opacity: 0.9 !important;
+    color: white !important;
+  }
+  
+  .hhh-cta-buttons {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    flex-wrap: wrap !important;
+    margin-top: 30px !important;
+  }
+  
+  .hhh-cta-btn {
+    display: inline-block !important;
+    padding: 14px 32px !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 1.05em !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .hhh-cta-btn.primary,
+  .hhh-cta-btn.primary * {
+    background: #C41E3A !important;
+    color: white !important;
+  }
+  
+  .hhh-cta-btn.primary:hover {
+    background: #A01830 !important;
+    transform: translateY(-2px) !important;
+  }
+  
+  .hhh-cta-btn.secondary,
+  .hhh-cta-btn.secondary * {
+    background: white !important;
+    color: #1E3A5F !important;
+  }
+  
+  .hhh-cta-btn.secondary:hover {
+    background: #F0F4F8 !important;
+    transform: translateY(-2px) !important;
+  }
+  
+  .hhh-mission {
+    text-align: center !important;
+    padding: 40px 20px !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+  }
+  
+  .hhh-mission h2,
+  .hhh-mission h2 * {
+    color: #1E3A5F !important;
+    font-size: 1.8em !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .hhh-mission p,
+  .hhh-mission p * {
+    font-size: 1.15em !important;
+    color: #555 !important;
+  }
+  
+  .hhh-service-area {
+    background: #F8F9FA !important;
+    border-left: 4px solid #1E3A5F !important;
+    padding: 20px 25px !important;
+    margin: 30px 0 !important;
+    border-radius: 0 8px 8px 0 !important;
+  }
+  
+  .hhh-service-area h3,
+  .hhh-service-area h3 * {
+    color: #1E3A5F !important;
+    margin: 0 0 10px 0 !important;
+  }
+  
+  .hhh-service-area p,
+  .hhh-service-area p * {
+    color: #444 !important;
+    margin: 0 !important;
+  }
+  
+  .hhh-quick-info {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 25px !important;
+    margin: 40px 0 !important;
+  }
+  
+  .hhh-info-card {
+    background: white !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 8px !important;
+    padding: 25px !important;
+    text-align: center !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+  }
+  
+  .hhh-info-card h3,
+  .hhh-info-card h3 * {
+    color: #1E3A5F !important;
+    margin: 0 0 15px 0 !important;
+    font-size: 1.2em !important;
+  }
+  
+  .hhh-info-card p,
+  .hhh-info-card p * {
+    margin: 8px 0 !important;
+    color: #555 !important;
+  }
+  
+  .hhh-info-card .phone,
+  .hhh-info-card .phone * {
+    font-size: 1.2em !important;
+    font-weight: 600 !important;
+    color: #1E3A5F !important;
+  }
+  
+  .hhh-partnerships {
+    background: #F8F9FA !important;
+    padding: 40px 30px !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+    margin-top: 40px !important;
+  }
+  
+  .hhh-partnerships h2,
+  .hhh-partnerships h2 * {
+    color: #1E3A5F !important;
+    margin-bottom: 25px !important;
+  }
+  
+  .hhh-partner-logos {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 40px !important;
+    flex-wrap: wrap !important;
+  }
+  
+  .hhh-partner-logos img {
+    max-height: 80px !important;
+    width: auto !important;
+  }
+  
+  .hhh-urgent-banner {
+    background: linear-gradient(135deg, #C41E3A 0%, #E53E3E 100%) !important;
+    color: white !important;
+    padding: 25px !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+    margin: 30px 0 !important;
+  }
+  
+  .hhh-urgent-banner h3,
+  .hhh-urgent-banner h3 * {
+    margin: 0 0 10px 0 !important;
+    font-size: 1.3em !important;
+    color: white !important;
+  }
+  
+  .hhh-urgent-banner p,
+  .hhh-urgent-banner p * {
+    margin: 0 !important;
+    opacity: 0.95 !important;
+    color: white !important;
+  }
+  
+  .hhh-urgent-banner strong {
+    color: white !important;
+  }
+</style>
+
+<div class="hhh-home">
+  
+  <!-- Hero Section -->
+  <div class="hhh-hero">
+    <h1 style="color: white !important;">Huron Helping Hands Food Pantry</h1>
+    <p class="tagline" style="color: white !important;">Feeding our neighbors with dignity and compassion</p>
+    <p class="tagline" style="color: white !important; font-style: italic; font-size: 1.1em !important; opacity: 0.9;">Help as many as we can, with as much as we can, for as long as we can, the best as we can</p>
+    <p class="established" style="color: white !important;">Proudly Serving Our Community Since 1996</p>
+    
+    <div class="hhh-hours-box">
+      <h3 style="color: white !important;">📍 Hours of Operation</h3>
+      <p style="color: white !important;"><strong style="color: white !important;">Wednesdays:</strong> 9:00 AM – 3:00 PM</p>
+      <p class="arrive-by" style="color: white !important;">(Please arrive by 2:30 PM)</p>
+      <p style="color: white !important;"><strong style="color: white !important;">Thursdays:</strong> 10:00 AM – 2:00 PM</p>
+      <p class="arrive-by" style="color: white !important;">(Please arrive by 1:30 PM)</p>
+      <p style="margin-top: 15px; color: white !important;"><strong style="color: white !important;">By Appointment:</strong> 419-366-0524</p>
+    </div>
+    
+    <div class="hhh-cta-buttons">
+      <a href="/receiving-goods" class="hhh-cta-btn primary" style="color: white !important; background: #C41E3A !important;">Need Food Assistance?</a>
+      <a href="/ways-to-give" class="hhh-cta-btn secondary" style="color: #1E3A5F !important; background: white !important;">Make a Donation</a>
+      <a href="/get-involved" class="hhh-cta-btn secondary" style="color: #1E3A5F !important; background: white !important;">Volunteer With Us</a>
+    </div>
+  </div>
+  
+  <!-- Simply Give Campaign Banner (Remove after March 28, 2026) -->
+  <div class="hhh-urgent-banner">
+    <h3 style="color: white !important;">🎉 Meijer Simply Give Campaign Now Active!</h3>
+    <p style="color: white !important;">Through March 28, 2026 — Purchase a $10 Simply Give card at Meijer and help stock our shelves. <strong style="color: white !important;">Double Match Days: March 7 &amp; 21</strong> — Your $10 becomes $30!</p>
+  </div>
+  
+  <!-- Mission Section -->
+  <div class="hhh-mission">
+    <h2 style="color: #1E3A5F !important;">Our Mission</h2>
+    <p style="color: #555 !important;">The ministry of Huron Helping Hands Food Pantry is to provide food to help the hungry in our community. We serve low-income families, single parents, those who are unemployed, the elderly, the physically disabled, and anyone facing temporary hard times. Everyone deserves access to nutritious food, and we're here to help — with dignity, respect, and open arms.</p>
+  </div>
+  
+  <!-- Service Area -->
+  <div class="hhh-service-area">
+    <h3 style="color: #1E3A5F !important;">Who We Serve</h3>
+    <p style="color: #444 !important;">We proudly serve residents of <strong>Huron</strong>, <strong>Berlin Heights</strong>, and the <strong>44839 zip code area</strong>. If you're unsure whether you qualify, please reach out — we're here to help, not to judge.</p>
+  </div>
+  
+  <!-- Quick Info Cards -->
+  <div class="hhh-quick-info">
+    <div class="hhh-info-card">
+      <h3 style="color: #1E3A5F !important;">📞 Contact Us</h3>
+      <p class="phone" style="color: #1E3A5F !important;">419-616-0088</p>
+      <p style="color: #555 !important;">For general inquiries</p>
+      <p class="phone" style="margin-top: 15px; color: #1E3A5F !important;">419-366-0524</p>
+      <p style="color: #555 !important;">To schedule an appointment</p>
+    </div>
+    
+    <div class="hhh-info-card">
+      <h3 style="color: #1E3A5F !important;">📍 Location</h3>
+      <p style="color: #555 !important;"><strong>820 Cleveland Rd E</strong></p>
+      <p style="color: #555 !important;">Huron, OH 44839</p>
+      <p style="margin-top: 15px;"><a href="https://maps.google.com/?q=820+Cleveland+Rd+E+Huron+OH+44839" target="_blank" style="color: #1E3A5F !important;">Get Directions →</a></p>
+    </div>
+    
+    <div class="hhh-info-card">
+      <h3 style="color: #1E3A5F !important;">📧 Email Us</h3>
+      <p><a href="mailto:huronfoodpantry@gmail.com" style="color: #1E3A5F !important; font-weight: 600;">huronfoodpantry@gmail.com</a></p>
+      <p style="margin-top: 15px; color: #555 !important;">Follow us on Facebook for updates!</p>
+    </div>
+  </div>
+  
+  <!-- Partnerships -->
+  <div class="hhh-partnerships">
+    <h2 style="color: #1E3A5F !important;">Our Partners</h2>
+    <p style="margin-bottom: 25px; color: #555 !important;">We're proud to work alongside organizations committed to fighting hunger in our region.</p>
+    <div class="hhh-partner-logos">
+      <!-- Add your partner logo images here -->
+      <div style="text-align: center;">
+        <p style="font-weight: 600; color: #1E3A5F !important;">Second Harvest Food Bank</p>
+        <p style="font-size: 0.9em; color: #666 !important;">of North Central Ohio</p>
+      </div>
+      <div style="text-align: center;">
+        <p style="font-weight: 600; color: #1E3A5F !important;">Meijer Simply Give</p>
+        <p style="font-size: 0.9em; color: #666 !important;">Partner Pantry</p>
+      </div>
+    </div>
+  </div>
+  
+</div>

@@ -1,0 +1,274 @@
+<!-- HURON HELPING HANDS FOOD PANTRY - NEWSLETTER PAGE -->
+<!-- Paste this into a Squarespace Code Block -->
+<!-- Note: You'll need to connect this to your email service (Mailchimp, etc.) -->
+
+<style>
+  .hhh-newsletter {
+    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    color: #333 !important;
+    line-height: 1.7 !important;
+    max-width: 700px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+  }
+  
+  .hhh-newsletter h1,
+  .hhh-newsletter h1 * {
+    color: #1E3A5F !important;
+    font-size: 2.2em !important;
+    margin-bottom: 15px !important;
+    text-align: center !important;
+  }
+  
+  .hhh-newsletter .subtitle,
+  .hhh-newsletter .subtitle * {
+    text-align: center !important;
+    font-size: 1.2em !important;
+    color: #555 !important;
+    margin-bottom: 35px !important;
+  }
+  
+  .hhh-newsletter-hero {
+    background: linear-gradient(135deg, #1E3A5F 0%, #2C5282 100%) !important;
+    color: white !important;
+    padding: 50px 40px !important;
+    border-radius: 12px !important;
+    text-align: center !important;
+    margin: 30px 0 !important;
+  }
+  
+  .hhh-newsletter-hero .icon {
+    font-size: 3em !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .hhh-newsletter-hero h2,
+  .hhh-newsletter-hero h2 * {
+    font-size: 1.8em !important;
+    margin: 0 0 15px 0 !important;
+    color: white !important;
+  }
+  
+  .hhh-newsletter-hero p,
+  .hhh-newsletter-hero p * {
+    color: rgba(255,255,255,0.95) !important;
+    font-size: 1.1em !important;
+    max-width: 500px !important;
+    margin: 0 auto 30px auto !important;
+  }
+  
+  .hhh-signup-form {
+    background: white !important;
+    padding: 35px !important;
+    border-radius: 8px !important;
+    margin: 0 auto !important;
+    max-width: 450px !important;
+  }
+  
+  .hhh-signup-form input[type="text"],
+  .hhh-signup-form input[type="email"] {
+    width: 100% !important;
+    padding: 14px 16px !important;
+    border: 2px solid #E2E8F0 !important;
+    border-radius: 6px !important;
+    font-size: 1em !important;
+    margin-bottom: 15px !important;
+    box-sizing: border-box !important;
+    transition: border-color 0.3s ease !important;
+    color: #333 !important;
+  }
+  
+  .hhh-signup-form input[type="text"]:focus,
+  .hhh-signup-form input[type="email"]:focus {
+    border-color: #1E3A5F !important;
+    outline: none !important;
+  }
+  
+  .hhh-signup-form button,
+  .hhh-signup-form button * {
+    width: 100% !important;
+    padding: 14px 20px !important;
+    background: #C41E3A !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-size: 1.1em !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .hhh-signup-form button:hover {
+    background: #A01830 !important;
+  }
+  
+  .hhh-privacy-note,
+  .hhh-privacy-note * {
+    font-size: 0.85em !important;
+    color: rgba(255,255,255,0.8) !important;
+    margin-top: 20px !important;
+  }
+  
+  .hhh-what-youll-get {
+    background: #F8F9FA !important;
+    padding: 35px !important;
+    border-radius: 8px !important;
+    margin: 40px 0 !important;
+  }
+  
+  .hhh-what-youll-get h3,
+  .hhh-what-youll-get h3 * {
+    color: #1E3A5F !important;
+    font-size: 1.4em !important;
+    margin: 0 0 25px 0 !important;
+    text-align: center !important;
+  }
+  
+  .hhh-benefit-list {
+    display: grid !important;
+    gap: 20px !important;
+  }
+  
+  .hhh-benefit-item {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 15px !important;
+    padding: 15px !important;
+    background: white !important;
+    border-radius: 8px !important;
+  }
+  
+  .hhh-benefit-item .icon {
+    font-size: 1.5em !important;
+    flex-shrink: 0 !important;
+  }
+  
+  .hhh-benefit-item h4,
+  .hhh-benefit-item h4 * {
+    margin: 0 0 5px 0 !important;
+    color: #1E3A5F !important;
+    font-size: 1.05em !important;
+  }
+  
+  .hhh-benefit-item p,
+  .hhh-benefit-item p * {
+    margin: 0 !important;
+    font-size: 0.95em !important;
+    color: #555 !important;
+  }
+  
+  .hhh-social-section {
+    text-align: center !important;
+    padding: 40px 20px !important;
+    border-top: 1px solid #E2E8F0 !important;
+    margin-top: 40px !important;
+  }
+  
+  .hhh-social-section h3,
+  .hhh-social-section h3 * {
+    color: #1E3A5F !important;
+    margin-bottom: 20px !important;
+    font-size: 1.3em !important;
+  }
+  
+  .hhh-social-section p,
+  .hhh-social-section p * {
+    color: #555 !important;
+    margin-bottom: 25px !important;
+  }
+  
+  .hhh-social-btn,
+  .hhh-social-btn * {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    background: #1877F2 !important;
+    color: white !important;
+    padding: 14px 28px !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 1.05em !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .hhh-social-btn:hover {
+    background: #1565D8 !important;
+    transform: translateY(-2px) !important;
+  }
+  
+  .hhh-social-btn .fb-icon {
+    font-size: 1.3em !important;
+  }
+</style>
+
+<div class="hhh-newsletter">
+  
+  <h1 style="color: #1E3A5F !important;">Stay Connected</h1>
+  <p class="subtitle" style="color: #555 !important;">Get updates on our pantry, upcoming events, and ways to help</p>
+  
+  <div class="hhh-newsletter-hero">
+    <div class="icon">📬</div>
+    <h2 style="color: white !important;">Join Our Newsletter</h2>
+    <p style="color: white !important;">Be the first to know about special campaigns, volunteer opportunities, and community events. We promise not to flood your inbox!</p>
+    
+    <div class="hhh-signup-form">
+      <!-- 
+        INSTRUCTIONS FOR SETUP:
+        Replace this form with your email service's embed code (Mailchimp, Constant Contact, etc.)
+        Or connect this to Squarespace's built-in newsletter feature
+      -->
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required style="color: #333 !important;">
+        <input type="email" name="email" placeholder="Your Email Address" required style="color: #333 !important;">
+        <button type="submit" style="color: white !important; background: #C41E3A !important;">Subscribe to Newsletter</button>
+      </form>
+    </div>
+    
+    <p class="hhh-privacy-note" style="color: rgba(255,255,255,0.8) !important;">🔒 We respect your privacy and will never share your information with third parties.</p>
+  </div>
+  
+  <div class="hhh-what-youll-get">
+    <h3 style="color: #1E3A5F !important;">What You'll Receive</h3>
+    <div class="hhh-benefit-list">
+      <div class="hhh-benefit-item">
+        <span class="icon">📅</span>
+        <div>
+          <h4 style="color: #1E3A5F !important;">Event Announcements</h4>
+          <p style="color: #555 !important;">Be the first to know about special distributions, community events, and volunteer opportunities.</p>
+        </div>
+      </div>
+      <div class="hhh-benefit-item">
+        <span class="icon">🎯</span>
+        <div>
+          <h4 style="color: #1E3A5F !important;">Campaign Updates</h4>
+          <p style="color: #555 !important;">Learn about programs like Meijer Simply Give and how you can maximize your impact.</p>
+        </div>
+      </div>
+      <div class="hhh-benefit-item">
+        <span class="icon">📋</span>
+        <div>
+          <h4 style="color: #1E3A5F !important;">Current Needs</h4>
+          <p style="color: #555 !important;">Find out what items we need most and how your donations make a difference.</p>
+        </div>
+      </div>
+      <div class="hhh-benefit-item">
+        <span class="icon">💝</span>
+        <div>
+          <h4 style="color: #1E3A5F !important;">Impact Stories</h4>
+          <p style="color: #555 !important;">See how your support is helping families in our community.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="hhh-social-section">
+    <h3 style="color: #1E3A5F !important;">Follow Us on Facebook</h3>
+    <p style="color: #555 !important;">For more frequent updates, photos, and community news, follow us on Facebook!</p>
+    <a href="https://www.facebook.com/profile.php?id=100067649997052" target="_blank" class="hhh-social-btn" style="color: white !important; background: #1877F2 !important;">
+      <span class="fb-icon">📘</span>
+      Follow Huron Helping Hands
+    </a>
+  </div>
+  
+</div>

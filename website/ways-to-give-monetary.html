@@ -1,0 +1,376 @@
+<!-- HURON HELPING HANDS FOOD PANTRY - MONETARY DONATIONS PAGE -->
+<!-- Paste this into a Squarespace Code Block -->
+
+<style>
+  .hhh-donate {
+    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    color: #333 !important;
+    line-height: 1.7 !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+  }
+  
+  .hhh-donate h1,
+  .hhh-donate h1 * {
+    color: #1E3A5F !important;
+    font-size: 2.2em !important;
+    margin-bottom: 15px !important;
+    text-align: center !important;
+  }
+  
+  .hhh-donate .subtitle,
+  .hhh-donate .subtitle * {
+    text-align: center !important;
+    font-size: 1.2em !important;
+    color: #555 !important;
+    margin-bottom: 35px !important;
+  }
+  
+  .hhh-donate h2,
+  .hhh-donate h2 * {
+    color: #1E3A5F !important;
+    font-size: 1.5em !important;
+    margin: 40px 0 20px 0 !important;
+    padding-bottom: 10px !important;
+    border-bottom: 2px solid #E2E8F0 !important;
+  }
+  
+  .hhh-donate p,
+  .hhh-donate p * {
+    font-size: 1.1em !important;
+    margin-bottom: 18px !important;
+    color: #444 !important;
+  }
+  
+  .hhh-donate-hero {
+    background: linear-gradient(135deg, #1E3A5F 0%, #2C5282 100%) !important;
+    color: white !important;
+    padding: 50px 40px !important;
+    border-radius: 12px !important;
+    text-align: center !important;
+    margin: 30px 0 !important;
+  }
+  
+  .hhh-donate-hero .icon {
+    font-size: 3em !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .hhh-donate-hero h2,
+  .hhh-donate-hero h2 * {
+    font-size: 1.8em !important;
+    margin: 0 0 15px 0 !important;
+    border: none !important;
+    color: white !important;
+    padding: 0 !important;
+  }
+  
+  .hhh-donate-hero p,
+  .hhh-donate-hero p * {
+    color: rgba(255,255,255,0.95) !important;
+    font-size: 1.15em !important;
+    max-width: 550px !important;
+    margin: 0 auto 30px auto !important;
+  }
+  
+  .hhh-donate-btn,
+  .hhh-donate-btn * {
+    display: inline-block !important;
+    background: #C41E3A !important;
+    color: white !important;
+    padding: 16px 40px !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    font-weight: 700 !important;
+    font-size: 1.2em !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3) !important;
+  }
+  
+  .hhh-donate-btn:hover {
+    background: #A01830 !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 6px 20px rgba(196, 30, 58, 0.4) !important;
+  }
+  
+  .hhh-impact-section {
+    background: #F8F9FA !important;
+    padding: 35px !important;
+    border-radius: 8px !important;
+    margin: 35px 0 !important;
+    text-align: center !important;
+  }
+  
+  .hhh-impact-section h3,
+  .hhh-impact-section h3 * {
+    color: #1E3A5F !important;
+    margin: 0 0 25px 0 !important;
+    font-size: 1.4em !important;
+  }
+  
+  .hhh-impact-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+    justify-content: center !important;
+  }
+  
+  .hhh-impact-card {
+    background: white !important;
+    padding: 25px 30px !important;
+    border-radius: 8px !important;
+    min-width: 150px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+  }
+  
+  .hhh-impact-card .amount,
+  .hhh-impact-card .amount * {
+    font-size: 2em !important;
+    font-weight: 700 !important;
+    color: #1E3A5F !important;
+    display: block !important;
+  }
+  
+  .hhh-impact-card .equals,
+  .hhh-impact-card .equals * {
+    font-size: 1.2em !important;
+    color: #C41E3A !important;
+    margin: 5px 0 !important;
+  }
+  
+  .hhh-impact-card .result,
+  .hhh-impact-card .result * {
+    font-size: 1.1em !important;
+    color: #555 !important;
+    font-weight: 600 !important;
+  }
+  
+  .hhh-other-ways {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 25px !important;
+    margin: 30px 0 !important;
+  }
+  
+  .hhh-way-card {
+    background: white !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 8px !important;
+    padding: 30px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+  }
+  
+  .hhh-way-card .icon {
+    font-size: 2em !important;
+    margin-bottom: 15px !important;
+  }
+  
+  .hhh-way-card h3,
+  .hhh-way-card h3 * {
+    color: #1E3A5F !important;
+    margin: 0 0 12px 0 !important;
+    font-size: 1.2em !important;
+  }
+  
+  .hhh-way-card p,
+  .hhh-way-card p * {
+    font-size: 1em !important;
+    margin: 0 !important;
+    color: #555 !important;
+  }
+  
+  .hhh-way-card a {
+    color: #1E3A5F !important;
+    font-weight: 600 !important;
+  }
+  
+  .hhh-simply-give-highlight {
+    background: linear-gradient(135deg, #0047AB 0%, #1E5BC6 100%) !important;
+    color: white !important;
+    padding: 35px !important;
+    border-radius: 8px !important;
+    margin: 35px 0 !important;
+  }
+  
+  .hhh-simply-give-highlight h3,
+  .hhh-simply-give-highlight h3 * {
+    margin: 0 0 15px 0 !important;
+    font-size: 1.4em !important;
+    color: white !important;
+  }
+  
+  .hhh-simply-give-highlight p,
+  .hhh-simply-give-highlight p * {
+    color: rgba(255,255,255,0.95) !important;
+    margin: 0 0 15px 0 !important;
+  }
+  
+  .hhh-simply-give-highlight .highlight-box {
+    background: rgba(255,255,255,0.15) !important;
+    padding: 15px 20px !important;
+    border-radius: 6px !important;
+    margin-top: 20px !important;
+  }
+  
+  .hhh-simply-give-highlight .highlight-box strong {
+    color: #FFD700 !important;
+  }
+  
+  .hhh-tax-info {
+    background: #F8F9FA !important;
+    border-left: 4px solid #1E3A5F !important;
+    padding: 25px !important;
+    border-radius: 0 8px 8px 0 !important;
+    margin: 35px 0 !important;
+  }
+  
+  .hhh-tax-info h3,
+  .hhh-tax-info h3 * {
+    color: #1E3A5F !important;
+    margin: 0 0 12px 0 !important;
+    font-size: 1.15em !important;
+  }
+  
+  .hhh-tax-info p,
+  .hhh-tax-info p * {
+    margin: 0 !important;
+    font-size: 1em !important;
+    color: #444 !important;
+  }
+  
+  .hhh-contact-donate {
+    text-align: center !important;
+    padding: 40px !important;
+    background: white !important;
+    border: 2px solid #1E3A5F !important;
+    border-radius: 8px !important;
+    margin: 35px 0 !important;
+  }
+  
+  .hhh-contact-donate h3,
+  .hhh-contact-donate h3 * {
+    color: #1E3A5F !important;
+    margin: 0 0 15px 0 !important;
+    font-size: 1.3em !important;
+  }
+  
+  .hhh-contact-donate p,
+  .hhh-contact-donate p * {
+    margin: 0 0 20px 0 !important;
+    color: #555 !important;
+  }
+  
+  .hhh-contact-donate .phone,
+  .hhh-contact-donate .phone * {
+    font-size: 1.4em !important;
+    font-weight: 600 !important;
+    color: #1E3A5F !important;
+  }
+</style>
+
+<div class="hhh-donate">
+  
+  <h1 style="color: #1E3A5F !important;">Monetary Donations</h1>
+  <p class="subtitle" style="color: #555 !important;">Your financial support helps us keep our shelves stocked with nutritious food</p>
+  
+  <!-- MAIN DONATE CTA -->
+  <div class="hhh-donate-hero">
+    <div class="icon">💝</div>
+    <h2 style="color: white !important; border: none !important;">Make a Difference Today</h2>
+    <p style="color: white !important;">Every dollar you give goes directly toward purchasing food for families in Huron, Berlin Heights, and the 44839 area who are struggling to make ends meet.</p>
+    <a href="https://www.convergepay.com/hosted-payments/?ssl_txn_auth_token=urxJR7HBTamZHInqAZoTMgAAAZp%2BfaPX" target="_blank" class="hhh-donate-btn" style="color: white !important; background: #C41E3A !important;">Donate Now</a>
+  </div>
+  
+  <!-- IMPACT SECTION -->
+  <div class="hhh-impact-section">
+    <h3 style="color: #1E3A5F !important;">See Your Impact</h3>
+    <p style="color: #555 !important; margin-bottom: 25px !important;">Through our partnership with Second Harvest Food Bank, your donations go further.</p>
+    <div class="hhh-impact-grid">
+      <div class="hhh-impact-card">
+        <span class="amount" style="color: #1E3A5F !important;">$10</span>
+        <span class="equals" style="color: #C41E3A !important;">=</span>
+        <span class="result" style="color: #555 !important;">60 meals</span>
+      </div>
+      <div class="hhh-impact-card">
+        <span class="amount" style="color: #1E3A5F !important;">$25</span>
+        <span class="equals" style="color: #C41E3A !important;">=</span>
+        <span class="result" style="color: #555 !important;">150 meals</span>
+      </div>
+      <div class="hhh-impact-card">
+        <span class="amount" style="color: #1E3A5F !important;">$50</span>
+        <span class="equals" style="color: #C41E3A !important;">=</span>
+        <span class="result" style="color: #555 !important;">300 meals</span>
+      </div>
+      <div class="hhh-impact-card">
+        <span class="amount" style="color: #1E3A5F !important;">$100</span>
+        <span class="equals" style="color: #C41E3A !important;">=</span>
+        <span class="result" style="color: #555 !important;">600 meals</span>
+      </div>
+    </div>
+    <p style="color: #666 !important; font-size: 0.9em !important; margin-top: 20px !important;">*Based on Feeding America's estimate that $1 provides approximately 6 meals</p>
+  </div>
+  
+  <!-- SIMPLY GIVE HIGHLIGHT -->
+  <div class="hhh-simply-give-highlight">
+    <h3 style="color: white !important;">🛒 Meijer Simply Give — Triple Your Impact!</h3>
+    <p style="color: white !important;">During the Simply Give campaign (Dec. 28, 2025 – March 28, 2026), you can purchase a $10 donation card at checkout at your local Meijer. Meijer matches every card, and on Double Match Days your $10 becomes $30!</p>
+    <div class="highlight-box">
+      <strong style="color: #FFD700 !important;">Double Match Days: March 7 &amp; 21, 2026</strong><br>
+      <span style="color: white !important;">Your $10 → $30 for our pantry!</span>
+    </div>
+    <p style="margin-top: 20px !important;"><a href="/get-involved/projects" style="color: white !important; text-decoration: underline !important;">Learn more about Simply Give →</a></p>
+  </div>
+  
+  <h2 style="color: #1E3A5F !important;">Other Ways to Give</h2>
+  
+  <div class="hhh-other-ways">
+    
+    <div class="hhh-way-card">
+      <div class="icon">✉️</div>
+      <h3 style="color: #1E3A5F !important;">Mail a Check</h3>
+      <p style="color: #555 !important;">Make checks payable to "Huron Helping Hands Food Pantry" and mail to:</p>
+      <p style="margin-top: 12px !important; font-weight: 600 !important; color: #333 !important;">
+        Huron Helping Hands Food Pantry<br>
+        820 Cleveland Rd E<br>
+        Huron, OH 44839
+      </p>
+    </div>
+    
+    <div class="hhh-way-card">
+      <div class="icon">🏢</div>
+      <h3 style="color: #1E3A5F !important;">Corporate Matching</h3>
+      <p style="color: #555 !important;">Many employers match charitable contributions. Check with your HR department to see if your company offers a matching gift program to double your impact!</p>
+    </div>
+    
+    <div class="hhh-way-card">
+      <div class="icon">🎁</div>
+      <h3 style="color: #1E3A5F !important;">Memorial &amp; Honor Gifts</h3>
+      <p style="color: #555 !important;">Make a gift in memory of a loved one or in honor of someone special. We'll send a notification to the person or family you designate.</p>
+      <p style="margin-top: 12px !important;"><a href="mailto:huronfoodpantry@gmail.com?subject=Memorial%20Gift%20Inquiry" style="color: #1E3A5F !important;">Contact us for details →</a></p>
+    </div>
+    
+    <div class="hhh-way-card">
+      <div class="icon">📅</div>
+      <h3 style="color: #1E3A5F !important;">Recurring Giving</h3>
+      <p style="color: #555 !important;">Set up a monthly donation to provide reliable support throughout the year. Consistent giving helps us plan and serve more families.</p>
+      <p style="margin-top: 12px !important;"><a href="mailto:huronfoodpantry@gmail.com?subject=Recurring%20Donation%20Inquiry" style="color: #1E3A5F !important;">Contact us to set up →</a></p>
+    </div>
+    
+  </div>
+  
+  <!-- TAX INFO -->
+  <div class="hhh-tax-info">
+    <h3 style="color: #1E3A5F !important;">Tax-Deductible Giving</h3>
+    <p style="color: #444 !important;">Huron Helping Hands Food Pantry is a 501(c)(3) nonprofit organization. Your donation may be tax-deductible to the extent allowed by law. Please consult your tax advisor for specific guidance on your situation.</p>
+  </div>
+  
+  <!-- CONTACT -->
+  <div class="hhh-contact-donate">
+    <h3 style="color: #1E3A5F !important;">Questions About Donating?</h3>
+    <p style="color: #555 !important;">We're happy to discuss how your gift can make the biggest impact.</p>
+    <div class="phone" style="color: #1E3A5F !important;">419-616-0088</div>
+    <p style="margin-top: 15px !important;"><a href="mailto:huronfoodpantry@gmail.com" style="color: #1E3A5F !important;">huronfoodpantry@gmail.com</a></p>
+  </div>
+  
+</div>

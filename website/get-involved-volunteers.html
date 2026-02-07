@@ -1,0 +1,341 @@
+<!-- HURON HELPING HANDS FOOD PANTRY - VOLUNTEERS PAGE -->
+<!-- Paste this into a Squarespace Code Block -->
+
+<style>
+  .hhh-volunteers {
+    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    color: #333 !important;
+    line-height: 1.7 !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+  }
+  
+  .hhh-volunteers h1,
+  .hhh-volunteers h1 * {
+    color: #1E3A5F !important;
+    font-size: 2.2em !important;
+    margin-bottom: 15px !important;
+    text-align: center !important;
+  }
+  
+  .hhh-volunteers .subtitle,
+  .hhh-volunteers .subtitle * {
+    text-align: center !important;
+    font-size: 1.2em !important;
+    color: #555 !important;
+    margin-bottom: 35px !important;
+  }
+  
+  .hhh-volunteers h2,
+  .hhh-volunteers h2 * {
+    color: #1E3A5F !important;
+    font-size: 1.5em !important;
+    margin: 40px 0 20px 0 !important;
+    padding-bottom: 10px !important;
+    border-bottom: 2px solid #E2E8F0 !important;
+  }
+  
+  .hhh-volunteers p,
+  .hhh-volunteers p * {
+    font-size: 1.1em !important;
+    margin-bottom: 18px !important;
+    color: #444 !important;
+  }
+  
+  .hhh-volunteer-cta {
+    background: linear-gradient(135deg, #1E3A5F 0%, #2C5282 100%) !important;
+    color: white !important;
+    padding: 40px !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+    margin: 30px 0 !important;
+  }
+  
+  .hhh-volunteer-cta h3,
+  .hhh-volunteer-cta h3 * {
+    font-size: 1.5em !important;
+    margin: 0 0 15px 0 !important;
+    color: white !important;
+  }
+  
+  .hhh-volunteer-cta p,
+  .hhh-volunteer-cta p * {
+    color: rgba(255,255,255,0.95) !important;
+    font-size: 1.1em !important;
+    margin-bottom: 25px !important;
+  }
+  
+  .hhh-volunteer-cta .cta-btn,
+  .hhh-volunteer-cta .cta-btn * {
+    display: inline-block !important;
+    background: #C41E3A !important;
+    color: white !important;
+    padding: 14px 35px !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 1.1em !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .hhh-volunteer-cta .cta-btn:hover {
+    background: #A01830 !important;
+    transform: translateY(-2px) !important;
+  }
+  
+  .hhh-role-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 25px !important;
+    margin: 30px 0 !important;
+  }
+  
+  .hhh-role-card {
+    background: white !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 8px !important;
+    padding: 25px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+  }
+  
+  .hhh-role-card .icon {
+    font-size: 2.2em !important;
+    margin-bottom: 15px !important;
+  }
+  
+  .hhh-role-card h3,
+  .hhh-role-card h3 * {
+    color: #1E3A5F !important;
+    font-size: 1.2em !important;
+    margin: 0 0 12px 0 !important;
+  }
+  
+  .hhh-role-card p,
+  .hhh-role-card p * {
+    font-size: 1em !important;
+    margin: 0 0 12px 0 !important;
+    color: #555 !important;
+  }
+  
+  .hhh-role-card .time-commitment,
+  .hhh-role-card .time-commitment * {
+    font-size: 0.9em !important;
+    color: #666 !important;
+    background: #F8F9FA !important;
+    padding: 8px 12px !important;
+    border-radius: 4px !important;
+    display: inline-block !important;
+  }
+  
+  .hhh-requirements {
+    background: #F8F9FA !important;
+    padding: 30px !important;
+    border-radius: 8px !important;
+    margin: 30px 0 !important;
+  }
+  
+  .hhh-requirements h3,
+  .hhh-requirements h3 * {
+    color: #1E3A5F !important;
+    margin: 0 0 20px 0 !important;
+    font-size: 1.3em !important;
+  }
+  
+  .hhh-requirements ul {
+    margin: 0 !important;
+    padding-left: 25px !important;
+  }
+  
+  .hhh-requirements li,
+  .hhh-requirements li * {
+    font-size: 1.05em !important;
+    margin-bottom: 12px !important;
+    color: #444 !important;
+  }
+  
+  .hhh-contact-box {
+    background: white !important;
+    border: 2px solid #1E3A5F !important;
+    border-radius: 8px !important;
+    padding: 30px !important;
+    text-align: center !important;
+    margin: 35px 0 !important;
+  }
+  
+  .hhh-contact-box h3,
+  .hhh-contact-box h3 * {
+    color: #1E3A5F !important;
+    margin: 0 0 20px 0 !important;
+    font-size: 1.3em !important;
+  }
+  
+  .hhh-contact-box .contact-item {
+    margin: 15px 0 !important;
+    font-size: 1.1em !important;
+  }
+  
+  .hhh-contact-box .phone,
+  .hhh-contact-box .phone * {
+    font-size: 1.3em !important;
+    font-weight: 600 !important;
+    color: #1E3A5F !important;
+  }
+  
+  .hhh-testimonial {
+    background: #1E3A5F !important;
+    color: white !important;
+    padding: 35px !important;
+    border-radius: 8px !important;
+    margin: 35px 0 !important;
+    font-style: italic !important;
+  }
+  
+  .hhh-testimonial p,
+  .hhh-testimonial p * {
+    color: rgba(255,255,255,0.95) !important;
+    font-size: 1.15em !important;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+  
+  .hhh-faq-item {
+    border-bottom: 1px solid #E2E8F0 !important;
+    padding: 20px 0 !important;
+  }
+  
+  .hhh-faq-item:last-child {
+    border-bottom: none !important;
+  }
+  
+  .hhh-faq-item h4,
+  .hhh-faq-item h4 * {
+    color: #1E3A5F !important;
+    margin: 0 0 10px 0 !important;
+    font-size: 1.1em !important;
+  }
+  
+  .hhh-faq-item p,
+  .hhh-faq-item p * {
+    margin: 0 !important;
+    font-size: 1em !important;
+    color: #444 !important;
+  }
+</style>
+
+<div class="hhh-volunteers">
+  
+  <h1 style="color: #1E3A5F !important;">Volunteer With Us</h1>
+  <p class="subtitle" style="color: #555 !important;">Join our team and help make a difference in your community</p>
+  
+  <div class="hhh-volunteer-cta">
+    <h3 style="color: white !important;">We Need Your Help!</h3>
+    <p style="color: white !important;">Huron Helping Hands is 100% volunteer-run. Every person who gives their time helps ensure our neighbors don't go hungry. No experience necessary — just a willing heart!</p>
+    <a href="mailto:huronfoodpantry@gmail.com?subject=Volunteer%20Inquiry" class="cta-btn" style="color: white !important; background: #C41E3A !important;">Sign Up to Volunteer</a>
+  </div>
+  
+  <h2 style="color: #1E3A5F !important;">Volunteer Opportunities</h2>
+  <p style="color: #444 !important;">We have a variety of roles available to fit different schedules and abilities. Whether you can give a few hours a week or help occasionally, there's a place for you.</p>
+  
+  <div class="hhh-role-grid">
+    
+    <div class="hhh-role-card">
+      <div class="icon">👋</div>
+      <h3 style="color: #1E3A5F !important;">Guest Services</h3>
+      <p style="color: #555 !important;">Welcome visitors, help them feel comfortable, assist with check-in, and guide them through the pantry.</p>
+      <span class="time-commitment" style="color: #666 !important;">Wed or Thu • 2-4 hours</span>
+    </div>
+    
+    <div class="hhh-role-card">
+      <div class="icon">📦</div>
+      <h3 style="color: #1E3A5F !important;">Stocking &amp; Organization</h3>
+      <p style="color: #555 !important;">Stock shelves, organize inventory, check expiration dates, and keep our pantry neat and accessible.</p>
+      <span class="time-commitment" style="color: #666 !important;">Flexible hours</span>
+    </div>
+    
+    <div class="hhh-role-card">
+      <div class="icon">🛒</div>
+      <h3 style="color: #1E3A5F !important;">Distribution Helper</h3>
+      <p style="color: #555 !important;">Help pack groceries, assist guests with their selections, and load items for families.</p>
+      <span class="time-commitment" style="color: #666 !important;">Wed or Thu • 2-4 hours</span>
+    </div>
+    
+    <div class="hhh-role-card">
+      <div class="icon">🚗</div>
+      <h3 style="color: #1E3A5F !important;">Donation Pickup Driver</h3>
+      <p style="color: #555 !important;">Pick up donated food from local stores and community drives, then deliver to the pantry.</p>
+      <span class="time-commitment" style="color: #666 !important;">As needed • 1-2 hours</span>
+    </div>
+    
+    <div class="hhh-role-card">
+      <div class="icon">📋</div>
+      <h3 style="color: #1E3A5F !important;">Administrative Support</h3>
+      <p style="color: #555 !important;">Help with phone calls, data entry, organizing paperwork, and other office tasks.</p>
+      <span class="time-commitment" style="color: #666 !important;">Flexible hours</span>
+    </div>
+    
+    <div class="hhh-role-card">
+      <div class="icon">🎨</div>
+      <h3 style="color: #1E3A5F !important;">Special Skills</h3>
+      <p style="color: #555 !important;">Have skills in marketing, grant writing, web design, or event planning? We'd love your expertise!</p>
+      <span class="time-commitment" style="color: #666 !important;">Project-based</span>
+    </div>
+    
+  </div>
+  
+  <div class="hhh-testimonial">
+    <p style="color: white !important;">"Volunteering at the food pantry has been one of the most rewarding experiences of my life. Seeing the relief on families' faces when they leave with groceries reminds me why community matters."</p>
+  </div>
+  
+  <h2 style="color: #1E3A5F !important;">What to Expect</h2>
+  
+  <div class="hhh-requirements">
+    <h3 style="color: #1E3A5F !important;">General Requirements</h3>
+    <ul>
+      <li style="color: #444 !important;"><strong>Age:</strong> Volunteers under 16 must be accompanied by an adult. Most roles are suitable for ages 14+.</li>
+      <li style="color: #444 !important;"><strong>Physical ability:</strong> Some roles require standing for extended periods and lifting up to 30-40 lbs.</li>
+      <li style="color: #444 !important;"><strong>Attire:</strong> Please wear comfortable clothes and closed-toe shoes.</li>
+      <li style="color: #444 !important;"><strong>Training:</strong> We'll show you everything you need to know — no prior experience required!</li>
+      <li style="color: #444 !important;"><strong>Commitment:</strong> We appreciate regular volunteers, but we also welcome those who can only help occasionally.</li>
+    </ul>
+  </div>
+  
+  <h2 style="color: #1E3A5F !important;">Frequently Asked Questions</h2>
+  
+  <div class="hhh-faq-item">
+    <h4 style="color: #1E3A5F !important;">How do I sign up to volunteer?</h4>
+    <p style="color: #444 !important;">Contact us by phone at 419-616-0088 or email <a href="mailto:huronfoodpantry@gmail.com" style="color: #1E3A5F !important;">huronfoodpantry@gmail.com</a>. We'll discuss available opportunities and find a role that fits your schedule.</p>
+  </div>
+  
+  <div class="hhh-faq-item">
+    <h4 style="color: #1E3A5F !important;">Do I need any special skills or experience?</h4>
+    <p style="color: #444 !important;">No special skills required! We provide all the training you need. The most important thing is a positive attitude and willingness to help others.</p>
+  </div>
+  
+  <div class="hhh-faq-item">
+    <h4 style="color: #1E3A5F !important;">Can I bring a group to volunteer?</h4>
+    <p style="color: #444 !important;">Yes! We welcome church groups, civic organizations, and corporate teams. Please contact us in advance to arrange group volunteering opportunities.</p>
+  </div>
+  
+  <div class="hhh-faq-item">
+    <h4 style="color: #1E3A5F !important;">Can I complete community service hours here?</h4>
+    <p style="color: #444 !important;">Absolutely. We're happy to sign off on community service hours for students and others. Just let us know your requirements.</p>
+  </div>
+  
+  <div class="hhh-faq-item">
+    <h4 style="color: #1E3A5F !important;">What days do you need volunteers most?</h4>
+    <p style="color: #444 !important;">Our busiest times are during distribution hours: <strong>Wednesdays 9am-3pm</strong> and <strong>Thursdays 10am-2pm</strong>. But we also need help with stocking and prep work throughout the week.</p>
+  </div>
+  
+  <div class="hhh-contact-box">
+    <h3 style="color: #1E3A5F !important;">Ready to Get Started?</h3>
+    <p style="color: #444 !important;">We'd love to have you on our team!</p>
+    <div class="contact-item">
+      <span class="phone" style="color: #1E3A5F !important;">419-616-0088</span>
+    </div>
+    <div class="contact-item">
+      <a href="mailto:huronfoodpantry@gmail.com" style="color: #1E3A5F !important; font-weight: 600;">huronfoodpantry@gmail.com</a>
+    </div>
+  </div>
+  
+</div>

@@ -1,0 +1,417 @@
+<!-- HURON HELPING HANDS FOOD PANTRY - CURRENT NEEDS PAGE -->
+<!-- Paste this into a Squarespace Code Block -->
+<!-- UPDATE THIS PAGE REGULARLY with current inventory needs -->
+
+<style>
+  .hhh-needs {
+    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    color: #333 !important;
+    line-height: 1.7 !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+  }
+  
+  .hhh-needs h1,
+  .hhh-needs h1 * {
+    color: #1E3A5F !important;
+    font-size: 2.2em !important;
+    margin-bottom: 15px !important;
+    text-align: center !important;
+  }
+  
+  .hhh-needs .subtitle,
+  .hhh-needs .subtitle * {
+    text-align: center !important;
+    font-size: 1.2em !important;
+    color: #555 !important;
+    margin-bottom: 35px !important;
+  }
+  
+  .hhh-needs h2,
+  .hhh-needs h2 * {
+    color: #1E3A5F !important;
+    font-size: 1.5em !important;
+    margin: 40px 0 20px 0 !important;
+    padding-bottom: 10px !important;
+    border-bottom: 2px solid #E2E8F0 !important;
+  }
+  
+  .hhh-needs p,
+  .hhh-needs p * {
+    font-size: 1.1em !important;
+    margin-bottom: 18px !important;
+    color: #444 !important;
+  }
+  
+  .hhh-urgent-needs {
+    background: linear-gradient(135deg, #C41E3A 0%, #E53E3E 100%) !important;
+    color: white !important;
+    padding: 35px !important;
+    border-radius: 12px !important;
+    margin: 30px 0 !important;
+  }
+  
+  .hhh-urgent-needs h2,
+  .hhh-urgent-needs h2 * {
+    color: white !important;
+    border: none !important;
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+    font-size: 1.5em !important;
+  }
+  
+  .hhh-urgent-needs .urgent-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+    gap: 15px !important;
+  }
+  
+  .hhh-urgent-needs .urgent-item,
+  .hhh-urgent-needs .urgent-item * {
+    background: rgba(255,255,255,0.15) !important;
+    padding: 15px !important;
+    border-radius: 6px !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    font-size: 1.05em !important;
+    color: white !important;
+  }
+  
+  .hhh-urgent-needs .updated,
+  .hhh-urgent-needs .updated * {
+    font-size: 0.85em !important;
+    opacity: 0.85 !important;
+    margin-top: 20px !important;
+    text-align: right !important;
+    color: white !important;
+  }
+  
+  .hhh-category-section {
+    margin: 35px 0 !important;
+  }
+  
+  .hhh-category-section h3,
+  .hhh-category-section h3 * {
+    color: #1E3A5F !important;
+    font-size: 1.25em !important;
+    margin-bottom: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+  
+  .hhh-category-section h3 .icon {
+    font-size: 1.3em !important;
+  }
+  
+  .hhh-item-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    gap: 12px !important;
+  }
+  
+  .hhh-item {
+    background: #F8F9FA !important;
+    padding: 12px 18px !important;
+    border-radius: 6px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    font-size: 1em !important;
+    color: #333 !important;
+  }
+  
+  .hhh-item.high-need {
+    background: #FEF3F3 !important;
+    border-left: 3px solid #C41E3A !important;
+  }
+  
+  .hhh-item .check {
+    color: #1E3A5F !important;
+    font-weight: bold !important;
+  }
+  
+  .hhh-item.high-need .check {
+    color: #C41E3A !important;
+  }
+  
+  .hhh-seasonal-box {
+    background: #EBF4FF !important;
+    border: 1px solid #BEE3F8 !important;
+    border-radius: 8px !important;
+    padding: 25px !important;
+    margin: 35px 0 !important;
+  }
+  
+  .hhh-seasonal-box h3,
+  .hhh-seasonal-box h3 * {
+    color: #1E3A5F !important;
+    margin: 0 0 15px 0 !important;
+    font-size: 1.2em !important;
+  }
+  
+  .hhh-seasonal-box p,
+  .hhh-seasonal-box p * {
+    margin: 0 !important;
+    font-size: 1em !important;
+    color: #444 !important;
+  }
+  
+  .hhh-do-not-donate {
+    background: #FFF5F5 !important;
+    border: 1px solid #FED7D7 !important;
+    border-radius: 8px !important;
+    padding: 25px !important;
+    margin: 35px 0 !important;
+  }
+  
+  .hhh-do-not-donate h3,
+  .hhh-do-not-donate h3 * {
+    color: #C41E3A !important;
+    margin: 0 0 15px 0 !important;
+    font-size: 1.2em !important;
+  }
+  
+  .hhh-do-not-donate ul {
+    margin: 0 !important;
+    padding-left: 20px !important;
+  }
+  
+  .hhh-do-not-donate li,
+  .hhh-do-not-donate li * {
+    margin-bottom: 8px !important;
+    color: #555 !important;
+  }
+  
+  .hhh-dropoff-info {
+    background: #1E3A5F !important;
+    color: white !important;
+    padding: 30px !important;
+    border-radius: 8px !important;
+    margin: 35px 0 !important;
+  }
+  
+  .hhh-dropoff-info h3,
+  .hhh-dropoff-info h3 * {
+    margin: 0 0 20px 0 !important;
+    font-size: 1.3em !important;
+    color: white !important;
+  }
+  
+  .hhh-dropoff-info p,
+  .hhh-dropoff-info p * {
+    color: rgba(255,255,255,0.95) !important;
+    margin: 10px 0 !important;
+  }
+  
+  .hhh-dropoff-info strong {
+    color: white !important;
+  }
+  
+  .hhh-dropoff-info .address {
+    background: rgba(255,255,255,0.1) !important;
+    padding: 15px !important;
+    border-radius: 6px !important;
+    margin-top: 15px !important;
+  }
+  
+  .hhh-dropoff-info .address * {
+    color: white !important;
+  }
+  
+  .hhh-food-drive-cta {
+    background: #F8F9FA !important;
+    padding: 35px !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+    margin: 35px 0 !important;
+  }
+  
+  .hhh-food-drive-cta h3,
+  .hhh-food-drive-cta h3 * {
+    color: #1E3A5F !important;
+    margin: 0 0 15px 0 !important;
+    font-size: 1.3em !important;
+  }
+  
+  .hhh-food-drive-cta p,
+  .hhh-food-drive-cta p * {
+    margin: 0 0 20px 0 !important;
+    color: #555 !important;
+  }
+  
+  .hhh-food-drive-cta .cta-btn,
+  .hhh-food-drive-cta .cta-btn * {
+    display: inline-block !important;
+    background: #1E3A5F !important;
+    color: white !important;
+    padding: 12px 28px !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .hhh-food-drive-cta .cta-btn:hover {
+    background: #2C5282 !important;
+    transform: translateY(-2px) !important;
+  }
+</style>
+
+<div class="hhh-needs">
+  
+  <h1 style="color: #1E3A5F !important;">Current Needs</h1>
+  <p class="subtitle" style="color: #555 !important;">Help us stock our shelves with the items families need most</p>
+  
+  <!-- URGENT NEEDS - UPDATE REGULARLY -->
+  <div class="hhh-urgent-needs">
+    <h2 style="color: white !important; border: none !important;">🚨 Most Needed Right Now</h2>
+    <div class="urgent-grid">
+      <div class="urgent-item" style="color: white !important;">Peanut Butter</div>
+      <div class="urgent-item" style="color: white !important;">Canned Tuna/Chicken</div>
+      <div class="urgent-item" style="color: white !important;">Canned Vegetables</div>
+      <div class="urgent-item" style="color: white !important;">Cereal</div>
+      <div class="urgent-item" style="color: white !important;">Pasta Sauce</div>
+      <div class="urgent-item" style="color: white !important;">Diapers (Sizes 4-6)</div>
+    </div>
+    <p class="updated" style="color: white !important;">Last updated: January 2026</p>
+  </div>
+  
+  <!-- FOOD ITEMS BY CATEGORY -->
+  <h2 style="color: #1E3A5F !important;">Food Items We Accept</h2>
+  
+  <div class="hhh-category-section">
+    <h3 style="color: #1E3A5F !important;"><span class="icon">🥫</span> Canned Goods</h3>
+    <div class="hhh-item-grid">
+      <div class="hhh-item high-need"><span class="check" style="color: #C41E3A !important;">★</span> <span style="color: #333 !important;">Canned vegetables</span></div>
+      <div class="hhh-item high-need"><span class="check" style="color: #C41E3A !important;">★</span> <span style="color: #333 !important;">Canned fruits</span></div>
+      <div class="hhh-item high-need"><span class="check" style="color: #C41E3A !important;">★</span> <span style="color: #333 !important;">Canned tuna/chicken</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Canned beans</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Canned soups</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Canned tomatoes</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Canned pasta (ravioli, etc.)</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Canned chili</span></div>
+    </div>
+  </div>
+  
+  <div class="hhh-category-section">
+    <h3 style="color: #1E3A5F !important;"><span class="icon">🍝</span> Dry Goods &amp; Grains</h3>
+    <div class="hhh-item-grid">
+      <div class="hhh-item high-need"><span class="check" style="color: #C41E3A !important;">★</span> <span style="color: #333 !important;">Pasta (all shapes)</span></div>
+      <div class="hhh-item high-need"><span class="check" style="color: #C41E3A !important;">★</span> <span style="color: #333 !important;">Rice</span></div>
+      <div class="hhh-item high-need"><span class="check" style="color: #C41E3A !important;">★</span> <span style="color: #333 !important;">Cereal</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Oatmeal</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Pancake mix</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Macaroni &amp; cheese</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Crackers</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Stuffing mix</span></div>
+    </div>
+  </div>
+  
+  <div class="hhh-category-section">
+    <h3 style="color: #1E3A5F !important;"><span class="icon">🥜</span> Protein &amp; Spreads</h3>
+    <div class="hhh-item-grid">
+      <div class="hhh-item high-need"><span class="check" style="color: #C41E3A !important;">★</span> <span style="color: #333 !important;">Peanut butter</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Jelly/Jam</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Dried beans</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Nuts (sealed packages)</span></div>
+    </div>
+  </div>
+  
+  <div class="hhh-category-section">
+    <h3 style="color: #1E3A5F !important;"><span class="icon">🍳</span> Cooking Essentials</h3>
+    <div class="hhh-item-grid">
+      <div class="hhh-item high-need"><span class="check" style="color: #C41E3A !important;">★</span> <span style="color: #333 !important;">Pasta sauce</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Cooking oil</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Flour</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Sugar</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Salt &amp; pepper</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Spices</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Syrup</span></div>
+    </div>
+  </div>
+  
+  <div class="hhh-category-section">
+    <h3 style="color: #1E3A5F !important;"><span class="icon">☕</span> Beverages</h3>
+    <div class="hhh-item-grid">
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Coffee</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Tea</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Juice (shelf-stable)</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Powdered drink mixes</span></div>
+    </div>
+  </div>
+  
+  <!-- NON-FOOD ITEMS -->
+  <h2 style="color: #1E3A5F !important;">Non-Food Items</h2>
+  
+  <div class="hhh-category-section">
+    <h3 style="color: #1E3A5F !important;"><span class="icon">🧴</span> Personal Care</h3>
+    <div class="hhh-item-grid">
+      <div class="hhh-item high-need"><span class="check" style="color: #C41E3A !important;">★</span> <span style="color: #333 !important;">Diapers (sizes 4, 5, 6)</span></div>
+      <div class="hhh-item high-need"><span class="check" style="color: #C41E3A !important;">★</span> <span style="color: #333 !important;">Toothpaste</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Toothbrushes</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Soap/Body wash</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Shampoo</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Deodorant</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Feminine hygiene products</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Razors</span></div>
+    </div>
+  </div>
+  
+  <div class="hhh-category-section">
+    <h3 style="color: #1E3A5F !important;"><span class="icon">🧻</span> Household Items</h3>
+    <div class="hhh-item-grid">
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Toilet paper</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Paper towels</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Dish soap</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Laundry detergent</span></div>
+      <div class="hhh-item"><span class="check" style="color: #1E3A5F !important;">✓</span> <span style="color: #333 !important;">Cleaning supplies</span></div>
+    </div>
+  </div>
+  
+  <!-- SEASONAL NEEDS -->
+  <div class="hhh-seasonal-box">
+    <h3 style="color: #1E3A5F !important;">🗓️ Seasonal Needs</h3>
+    <p style="color: #444 !important;">During different times of year, we have special needs:</p>
+    <p style="margin-top: 10px !important; color: #444 !important;"><strong>Winter:</strong> Soup, hot cocoa, comfort foods</p>
+    <p style="color: #444 !important;"><strong>Summer:</strong> Kid-friendly snacks, easy meals (school's out!)</p>
+    <p style="color: #444 !important;"><strong>Holidays:</strong> Stuffing, cranberry sauce, dessert mixes, special treats</p>
+  </div>
+  
+  <!-- WHAT WE CANNOT ACCEPT -->
+  <div class="hhh-do-not-donate">
+    <h3 style="color: #C41E3A !important;">⚠️ Items We Cannot Accept</h3>
+    <ul>
+      <li style="color: #555 !important;">Expired food (please check dates before donating)</li>
+      <li style="color: #555 !important;">Opened or damaged packages</li>
+      <li style="color: #555 !important;">Homemade or home-canned items</li>
+      <li style="color: #555 !important;">Items without labels</li>
+      <li style="color: #555 !important;">Alcoholic beverages</li>
+      <li style="color: #555 !important;">Recalled products</li>
+      <li style="color: #555 !important;">Perishables without prior arrangement</li>
+    </ul>
+  </div>
+  
+  <!-- DROP-OFF INFO -->
+  <div class="hhh-dropoff-info">
+    <h3 style="color: white !important;">📍 Where to Drop Off Donations</h3>
+    <p style="color: white !important;">Bring donations during our regular hours:</p>
+    <p style="color: white !important;"><strong style="color: white !important;">Wednesdays:</strong> 9:00 AM – 3:00 PM</p>
+    <p style="color: white !important;"><strong style="color: white !important;">Thursdays:</strong> 10:00 AM – 2:00 PM</p>
+    <div class="address">
+      <strong style="color: white !important;">Huron Helping Hands Food Pantry</strong><br>
+      <span style="color: white !important;">820 Cleveland Rd E</span><br>
+      <span style="color: white !important;">Huron, OH 44839</span>
+    </div>
+    <p style="margin-top: 15px; font-size: 0.95em; color: white !important;">For large donations, please call ahead: <strong style="color: white !important;">419-616-0088</strong></p>
+  </div>
+  
+  <!-- FOOD DRIVE CTA -->
+  <div class="hhh-food-drive-cta">
+    <h3 style="color: #1E3A5F !important;">🎯 Organizing a Food Drive?</h3>
+    <p style="color: #555 !important;">We'd love to partner with your school, church, business, or organization for a food drive!</p>
+    <a href="mailto:huronfoodpantry@gmail.com?subject=Food%20Drive%20Inquiry" class="cta-btn" style="color: white !important; background: #1E3A5F !important;">Contact Us to Coordinate</a>
+  </div>
+  
+</div>
