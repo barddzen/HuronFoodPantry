@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stay Connected | Huron Helping Hands Food Pantry</title>
+  <meta name="description" content="Sign up for updates from Huron Helping Hands Food Pantry — events, campaigns, and ways to help.">
+  <link rel="icon" type="image/webp" href="images/hhh-logo.webp">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main id="main-content" class="page-content">
+
+    <h1 class="page-title">Stay Connected</h1>
+    <p class="subtitle">Get updates on our pantry, upcoming events, and ways to help</p>
+
+    <div class="hero hero--navy hero--center">
+      <div class="icon-large">&#128236;</div>
+      <h2>Join Our Newsletter</h2>
+      <p>Be the first to know about special campaigns, volunteer opportunities, and community events. We promise not to flood your inbox!</p>
+
+      <div class="signup-form">
+        <form id="newsletter-form">
+          <input type="text" name="name" id="nl-name" placeholder="Your Name" required>
+          <input type="email" name="email" id="nl-email" placeholder="Your Email Address" required>
+          <button type="submit" class="btn btn--primary btn--full">Subscribe to Newsletter</button>
+        </form>
+        <p id="nl-message" class="form-message" hidden></p>
+      </div>
+
+      <p class="privacy-note">We respect your privacy and will never share your information with third parties.</p>
+    </div>
+
+    <div class="section-box">
+      <h3 class="section-box-title">What You'll Receive</h3>
+      <div class="values-grid">
+        <div class="value-item">
+          <span class="icon">&#128197;</span>
+          <div>
+            <h4>Event Announcements</h4>
+            <p>Be the first to know about special distributions, community events, and volunteer opportunities.</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <span class="icon">&#127919;</span>
+          <div>
+            <h4>Campaign Updates</h4>
+            <p>Learn about programs like Meijer Simply Give and how you can maximize your impact.</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <span class="icon">&#128203;</span>
+          <div>
+            <h4>Current Needs</h4>
+            <p>Find out what items we need most and how your donations make a difference.</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <span class="icon">&#128157;</span>
+          <div>
+            <h4>Impact Stories</h4>
+            <p>See how your support is helping families in our community.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="social-section">
+      <h3>Follow Us on Facebook</h3>
+      <p>For more frequent updates, photos, and community news, follow us on Facebook!</p>
+      <a href="https://www.facebook.com/profile.php?id=100067649997052" target="_blank" rel="noopener" class="social-btn social-btn--facebook">
+        Follow Huron Helping Hands
+      </a>
+    </div>
+
+  </main>
+  <script src="js/main.js"></script>
+  <script>
+  (function() {
+    var form = document.getElementById('newsletter-form');
+    var msg = document.getElementById('nl-message');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var btn = form.querySelector('button');
+      btn.disabled = true;
+      btn.textContent = 'Subscribing...';
+      msg.hidden = true;
+      fetch('https://hphusllru8.execute-api.us-east-2.amazonaws.com/newsletter', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          name: document.getElementById('nl-name').value,
+          email: document.getElementById('nl-email').value
+        })
+      })
+      .then(function(r) { return r.json().then(function(d) { return {ok: r.ok, data: d}; }); })
+      .then(function(res) {
+        if (res.ok) {
+          msg.textContent = 'Thank you for subscribing!';
+          msg.className = 'form-message form-message--success';
+          form.reset();
+        } else {
+          msg.textContent = res.data.error || 'Something went wrong. Please try again.';
+          msg.className = 'form-message form-message--error';
+        }
+        msg.hidden = false;
+        btn.disabled = false;
+        btn.textContent = 'Subscribe to Newsletter';
+      })
+      .catch(function() {
+        msg.textContent = 'Unable to connect. Please try again later.';
+        msg.className = 'form-message form-message--error';
+        msg.hidden = false;
+        btn.disabled = false;
+        btn.textContent = 'Subscribe to Newsletter';
+      });
+    });
+  })();
+  </script>
+</body>
+</html>
