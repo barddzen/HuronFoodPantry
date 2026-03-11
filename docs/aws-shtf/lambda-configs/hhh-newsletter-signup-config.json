@@ -1,0 +1,38 @@
+{
+    "FunctionName": "hhh-newsletter-signup",
+    "FunctionArn": "arn:aws:lambda:us-east-2:019524460192:function:hhh-newsletter-signup",
+    "Runtime": "python3.12",
+    "Role": "arn:aws:iam::019524460192:role/hhh-newsletter-lambda-role",
+    "Handler": "hhh-newsletter-signup.lambda_handler",
+    "CodeSize": 777,
+    "Description": "",
+    "Timeout": 10,
+    "MemorySize": 128,
+    "LastModified": "2026-03-04T18:10:00.129+0000",
+    "CodeSha256": "EQhUzZlFwDJjXWOC6gKVYb0iKiRoFIDPsf5cOr0P5/M=",
+    "Version": "$LATEST",
+    "TracingConfig": {
+        "Mode": "PassThrough"
+    },
+    "RevisionId": "634ac0e4-7fbb-4b07-84a7-67644ceff3ff",
+    "State": "Active",
+    "LastUpdateStatus": "Successful",
+    "PackageType": "Zip",
+    "Architectures": [
+        "x86_64"
+    ],
+    "EphemeralStorage": {
+        "Size": 512
+    },
+    "SnapStart": {
+        "ApplyOn": "None",
+        "OptimizationStatus": "Off"
+    },
+    "RuntimeVersionConfig": {
+        "RuntimeVersionArn": "arn:aws:lambda:us-east-2::runtime:27990c3d0965bea97240f3380b8d623b692705303bbde4c31fb02fa7daa05453"
+    },
+    "LoggingConfig": {
+        "LogFormat": "Text",
+        "LogGroup": "/aws/lambda/hhh-newsletter-signup"
+    }
+}
