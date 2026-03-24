@@ -4,6 +4,7 @@
 - **Static HTML/CSS/JS** — no build system, no frameworks
 - **Hosting**: AWS S3 + CloudFront (pending cert validation)
 - **Domain**: `www.huronhelpinghands.org` (DNS at SquareSpace)
+- **DNS**: Route53 (nameservers set in SquareSpace registrar)
 - **Region**: us-east-2 (S3), us-east-1 (ACM/CloudFront)
 
 ## Project Structure
@@ -57,13 +58,14 @@ aws cloudfront create-invalidation --distribution-id ECK9AA6465NAB --paths "/*"
 aws dynamodb scan --table-name hhh-newsletter --region us-east-2 --output table
 ```
 
-### DNS Validation Record (add in SquareSpace)
-- **Type**: CNAME
-- **Name**: `_2533e75d68a08d0430200a55b9d94884`
-- **Value**: `_6b4c812a0738045b7a14bc45904b50a3.jkddzztszm.acm-validations.aws.`
-
-### DNS Records (in SquareSpace)
-- **CNAME**: `www` → `d3rfsda8muk9go.cloudfront.net`
+### Route53 Hosted Zone
+- **Zone ID**: `Z023946711WSYHRBEF0CT`
+- **Records**: A ALIAS (naked + www) → CloudFront, ACM validation CNAME, SPF, DKIM, DMARC
+- **Nameservers** (set in SquareSpace):
+  - `ns-885.awsdns-46.net`
+  - `ns-1441.awsdns-52.org`
+  - `ns-417.awsdns-52.com`
+  - `ns-1680.awsdns-18.co.uk`
 
 ## Architecture Notes
 - Navigation and footer are injected by `js/main.js` — single source of truth
