@@ -453,3 +453,21 @@ Key findings:
 | `www.huronhelpinghands.org.` | A | d3rfsda8muk9go.cloudfront.net. |
 | `ECK9AA6465NAB` | d3rfsda8muk9go.cloudfront.net | www.huronhelpinghands.org, huronhelpinghands.org | Enabled |
 
+
+### Drift Update — 2026-03-24
+
+Automated drift detection found **1** items. See full report:
+`/Users/davidyutzy/Development/aws/drift-reports/huronhelpinghands-2026-03-24.md`
+
+Key findings:
+| `hhh-newsletter` | ENABLED | true | PAY_PER_REQUEST |
+| `huronhelpinghands.org.` | A | d3rfsda8muk9go.cloudfront.net. |
+| `huronhelpinghands.org.` | NS | ns-885.awsdns-46.net. |
+| `huronhelpinghands.org.` | SOA | ns-885.awsdns-46.net. awsdns-hostmaster.amazon.com. 1 7200 900 1209600 86400 |
+| `huronhelpinghands.org.` | TXT | "v=spf1 -all" |
+| `_2533e75d68a08d0430200a55b9d94884.huronhelpinghands.org.` | CNAME | _6b4c812a0738045b7a14bc45904b50a3.jkddzztszm.acm-validations.aws. |
+| `_dmarc.huronhelpinghands.org.` | TXT | "v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s" |
+| `_domainkey.huronhelpinghands.org.` | TXT | "v=DKIM1; p=" |
+| `www.huronhelpinghands.org.` | A | d3rfsda8muk9go.cloudfront.net. |
+| `ECK9AA6465NAB` | d3rfsda8muk9go.cloudfront.net | www.huronhelpinghands.org, huronhelpinghands.org | Enabled |
+
