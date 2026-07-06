@@ -1,5 +1,27 @@
 // Shared header/nav + footer — single source of truth
 // Note: All HTML content below is static/hardcoded (no user input), safe for insertion.
+
+// Google Analytics (GA4) — skip on local dev so test visits stay out of the data
+(function () {
+  var host = window.location.hostname;
+  if (host === 'localhost' || host === '127.0.0.1' || host === '') return;
+
+  var GA_ID = 'G-29J46PZ46J';
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  document.head.appendChild(s);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { window.dataLayer.push(arguments); }
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', GA_ID);
+})();
+
+// Seasonal campaign visibility — flip to true when a campaign is actively running
+var CAMPAIGNS = { 'simply-give': false };
+
 var chevron = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>';
 
 var siteHeader = ''
@@ -27,8 +49,7 @@ var siteHeader = ''
   + '        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Get Involved ' + chevron + '</button>'
   + '        <div class="dropdown-menu">'
   + '          <a href="get-involved-volunteers.html">Volunteer</a>'
-  + '          <a href="get-involved-projects.html">Projects &amp; Campaigns</a>'
-  + '          <a href="get-involved-newsletter.html">Newsletter</a>'
+  + '          <a href="get-involved-projects.html" data-campaign="simply-give">Projects &amp; Campaigns</a>'
   + '        </div>'
   + '      </div>'
   + '    </nav>'
@@ -53,8 +74,7 @@ var siteHeader = ''
   + '  <div class="nav-mobile-section">'
   + '    <div class="nav-mobile-section-title">Get Involved</div>'
   + '    <a href="get-involved-volunteers.html">Volunteer</a>'
-  + '    <a href="get-involved-projects.html">Projects &amp; Campaigns</a>'
-  + '    <a href="get-involved-newsletter.html">Newsletter</a>'
+  + '    <a href="get-involved-projects.html" data-campaign="simply-give">Projects &amp; Campaigns</a>'
   + '  </div>'
   + '</nav>';
 
@@ -63,9 +83,9 @@ var siteFooter = ''
   + '  <div class="footer-inner">'
   + '    <div class="footer-col">'
   + '      <strong>Huron Helping Hands Food Pantry</strong>'
-  + '      <p>820 Cleveland Rd E</p>'
+  + '      <p>607 S. Main St</p>'
   + '      <p>Huron, OH 44839</p>'
-  + '      <p><a href="https://maps.google.com/?q=820+Cleveland+Rd+E+Huron+OH+44839" target="_blank" rel="noopener">Get Directions</a></p>'
+  + '      <p><a href="https://maps.google.com/?q=607+S+Main+St+Huron+OH+44839" target="_blank" rel="noopener">Get Directions</a></p>'
   + '    </div>'
   + '    <div class="footer-col">'
   + '      <strong>Contact</strong>'
@@ -81,7 +101,7 @@ var siteFooter = ''
   + '    </div>'
   + '  </div>'
   + '  <div class="footer-bottom">'
-  + '    &copy; ' + new Date().getFullYear() + ' Huron Helping Hands Food Pantry &middot; Serving our community since 1996'
+  + '    &copy; ' + new Date().getFullYear() + ' Huron Helping Hands Food Pantry &middot; Serving our community since 1996 &middot; Registered 501(c)(3) nonprofit'
   + '  </div>'
   + '</footer>';
 
@@ -93,6 +113,13 @@ document.body.insertAdjacentHTML('beforeend', siteFooter);
 
 // Interactive behavior
 document.addEventListener('DOMContentLoaded', function() {
+
+  // Hide surfaces for seasonal campaigns that aren't currently running
+  document.querySelectorAll('[data-campaign]').forEach(function(el) {
+    if (!CAMPAIGNS[el.getAttribute('data-campaign')]) {
+      el.style.display = 'none';
+    }
+  });
 
   // Active page highlighting
   var currentPage = window.location.pathname.split('/').pop() || 'index.html';

@@ -429,6 +429,10 @@ svg { flex-shrink: 0; }
   text-decoration: underline;
 }
 
+/* Buttons keep their own styling inside heroes (override .hero a) */
+.hero .btn { text-decoration: none; }
+.hero .btn--secondary { color: var(--hhh-navy); }
+
 .hero .tagline {
   font-size: 1.3em;
   opacity: 0.95;
@@ -919,6 +923,45 @@ svg { flex-shrink: 0; }
   font-size: 0.9em;
   color: var(--color-text-muted);
 }
+
+.sponsors {
+  padding: 40px 30px;
+  text-align: center;
+  margin-top: var(--space-2xl);
+}
+.sponsors h2 { color: var(--hhh-navy); margin-bottom: 10px; }
+.sponsors .intro { color: var(--color-text-muted); max-width: 640px; margin: 0 auto 30px; }
+
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.sponsor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 18px;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: var(--hhh-navy);
+}
+.sponsor-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+}
+.sponsor-card img {
+  height: 70px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+.sponsor-name { font-weight: 700; color: var(--hhh-navy); }
+.sponsor-desc { font-size: 0.88em; color: var(--color-text-muted); line-height: 1.4; }
 
 /* ========================================
    EVENTS PAGE SPECIFICS

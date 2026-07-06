@@ -2,7 +2,7 @@
 
 ## Stack
 - **Static HTML/CSS/JS** — no build system, no frameworks
-- **Hosting**: AWS S3 + CloudFront (pending cert validation)
+- **Hosting**: AWS S3 + CloudFront (live)
 - **Domain**: `www.huronhelpinghands.org` (DNS at SquareSpace)
 - **DNS**: Route53 (nameservers set in SquareSpace registrar)
 - **Region**: us-east-2 (S3), us-east-1 (ACM/CloudFront)
@@ -33,8 +33,9 @@ docs/                          # Planning documents
 
 ## Deployment
 ```bash
-# Deploy to S3
-aws s3 sync site/ s3://www.huronhelpinghands.org/ --delete --region us-east-2
+# Deploy to S3 (additive — `--delete` is blocked by the global safety guard;
+# to prune removed files, run the delete yourself on the admin profile)
+aws s3 sync site/ s3://www.huronhelpinghands.org/ --region us-east-2
 
 # Invalidate CloudFront cache (once distribution is created)
 aws cloudfront create-invalidation --distribution-id ECK9AA6465NAB --paths "/*"
@@ -79,7 +80,7 @@ aws dynamodb scan --table-name hhh-newsletter --region us-east-2 --output table
 - Language should be accessible — this serves community members seeking food assistance
 - Contact info: 419-616-0088 (general), 419-366-0524 (appointments)
 - Email: huronfoodpantry@gmail.com
-- Address: 820 Cleveland Rd E, Huron, OH 44839
+- Address: 607 S. Main St, Huron, OH 44839
 - Hours: Wed 9am-3pm, Thu 10am-2pm
 - Service area: Huron, Berlin Heights, 44839 zip code
 

@@ -37,8 +37,8 @@
       </div>
     </div>
 
-    <!-- Simply Give Campaign Banner (Remove after March 28, 2026) -->
-    <div class="banner banner--red banner--center">
+    <!-- Simply Give Campaign Banner — toggled via CAMPAIGNS['simply-give'] in main.js -->
+    <div class="banner banner--red banner--center" data-campaign="simply-give">
       <h3>Meijer Simply Give Campaign Now Active!</h3>
       <p>Through March 28, 2026 — Purchase a $10 Simply Give card at Meijer and help stock our shelves. <strong>Double Match Days: March 7 &amp; 21</strong> — Your $10 becomes $30!</p>
     </div>
@@ -67,9 +67,9 @@
 
       <div class="card card--centered">
         <h3>Location</h3>
-        <p><strong>820 Cleveland Rd E</strong></p>
+        <p><strong>607 S. Main St</strong></p>
         <p>Huron, OH 44839</p>
-        <p><a href="https://maps.google.com/?q=820+Cleveland+Rd+E+Huron+OH+44839" target="_blank" rel="noopener">Get Directions &rarr;</a></p>
+        <p><a href="https://maps.google.com/?q=607+S+Main+St+Huron+OH+44839" target="_blank" rel="noopener">Get Directions &rarr;</a></p>
       </div>
 
       <div class="card card--centered">
@@ -87,10 +87,43 @@
         <div class="partner-item">
           <img src="images/shfb-logo.webp" alt="Second Harvest Food Bank of North Central Ohio" loading="lazy" style="max-height:80px; width:auto;">
         </div>
-        <div class="partner-item">
+        <div class="partner-item" data-campaign="simply-give">
           <p class="name">Meijer Simply Give</p>
           <p class="desc">Partner Pantry</p>
         </div>
+      </div>
+    </div>
+
+    <!-- Community Partners / Sponsors -->
+    <div class="sponsors">
+      <h2>Community Partners</h2>
+      <p class="intro">We're grateful to the local businesses and organizations whose generosity helps us feed our neighbors.</p>
+      <div class="sponsor-grid">
+        <a class="sponsor-card" href="https://firelandsvending.com/" target="_blank" rel="noopener">
+          <img src="images/sponsors/firelands-vending.png" alt="Firelands Vending" loading="lazy">
+          <span class="sponsor-name">Firelands Vending</span>
+          <span class="sponsor-desc">Locally owned vending and office coffee service.</span>
+        </a>
+        <a class="sponsor-card" href="https://humanesocietyoferiecounty.org/" target="_blank" rel="noopener">
+          <img src="images/sponsors/humane-society-erie.png" alt="Humane Society of Erie County" loading="lazy">
+          <span class="sponsor-name">Humane Society of Erie County</span>
+          <span class="sponsor-desc">Sheltering and caring for homeless dogs and cats.</span>
+        </a>
+        <a class="sponsor-card" href="https://www.gfs.com/en-us" target="_blank" rel="noopener">
+          <img src="images/sponsors/gfs.png" alt="Gordon Food Service" loading="lazy">
+          <span class="sponsor-name">Gordon Food Service</span>
+          <span class="sponsor-desc">Family-operated foodservice distributor.</span>
+        </a>
+        <a class="sponsor-card" href="https://cornellshuron.com/" target="_blank" rel="noopener">
+          <img src="images/sponsors/cornells.png" alt="Cornell's Foods" loading="lazy">
+          <span class="sponsor-name">Cornell's Foods</span>
+          <span class="sponsor-desc">Family-owned local IGA grocery serving Huron.</span>
+        </a>
+        <a class="sponsor-card" href="https://vine-olive.com/" target="_blank" rel="noopener">
+          <img src="images/sponsors/vine-olive.png" alt="Vine &amp; Olive" loading="lazy">
+          <span class="sponsor-name">Vine &amp; Olive</span>
+          <span class="sponsor-desc">Mediterranean bakery, specialty foods, and wine shop.</span>
+        </a>
       </div>
     </div>
 
