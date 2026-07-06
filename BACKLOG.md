@@ -12,17 +12,27 @@ Stage vocab: TODO, In progress, Blocked, Deferred, Won't do, Done, Archived.
 - Community Partners section on homepage — Firelands Vending, Humane Society of Erie County, Gordon Food Service, Cornell's Foods, Vine & Olive. Logos hosted locally under `site/images/sponsors/`, cards link out to each site.
 - CLAUDE.md CloudFront note corrected to "live".
 
-## Batch 2 — Design overhaul (TODO)
+## Done — Batch 2/3 (2026-07-06, deployed + verified live)
 
-- Design-system pass (typography scale, spacing rhythm, section treatments, softer hero) + per-page content tightening; pull imagery from Facebook.
-- Facebook feed — **Page Plugin iframe** (decided over API/Lambda), styled to fit the new design.
-- **Blocked — CashApp/Venmo block** on the monetary page: tap-to-pay deep-link buttons (primary on mobile) + QR with a "tap vs scan" explainer. Waiting on handles + QR images.
+- NFC/QR digital card at **[/card](https://www.huronhelpinghands.org/card)** — standalone `card/index.html` + vCard (`huron-helping-hands.vcf`). Save-to-Contacts, contact rows, Donate/Facebook/Website buttons. `/card` 302-redirects to `/card/` via the S3 website origin. URL handed to client for card production.
+- Facebook feed on the homepage — Page Plugin iframe, sized to container (up to 500px) via a guarded script in main.js so it never clips on mobile. Confirmed pulling live posts.
+- Design overhaul **iteration 1** — "warm & community" system pass (cream neutrals, larger radii, softer navy-tinted shadows, more section spacing). Applies site-wide via shared CSS. Direction chosen by client.
 
-## Batch 3 — New builds (TODO)
+## Design overhaul — remaining (TODO)
 
-- NFC/QR digital card at **`/card`** (`card/index.html` + CloudFront routing), mirroring hookedonyutz.com/david.html: logo, Save Contact vCard, address/phone/email, Facebook/Donate/Directions buttons. URL already handed to client for card production.
-- **Blocked — Meet the Team + volunteer spotlight.** Waiting on photos + bios.
-- **Blocked — Logo upscale swap** (webp set + favicon + all refs). Waiting on the Gemini-upscaled asset.
+- Per-page content tightening (copy density, layout rhythm) building on the warm system.
+- Photography — pull usable images from Facebook; request specific shots from client for the gaps.
+- Hero + section-title refinement, warm accent (`--hhh-warm`) used tastefully.
+
+## Blocked
+
+- **CashApp/Venmo block** (monetary page): tap-to-pay deep-link buttons (primary on mobile) + QR with "tap vs scan" explainer. Waiting on handles + QR images.
+- **Meet the Team + volunteer spotlight.** Waiting on photos + bios.
+- **Logo upscale swap** (webp set + favicon + all refs). Waiting on the Gemini-upscaled asset.
+
+## Client action
+
+- **Delete stray S3 object:** `aws s3 rm s3://www.huronhelpinghands.org/.DS_Store` (run on admin profile — deletes are blocked on the `claude` profile).
 
 ## Open content
 
