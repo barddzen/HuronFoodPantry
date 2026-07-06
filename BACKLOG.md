@@ -18,11 +18,12 @@ Stage vocab: TODO, In progress, Blocked, Deferred, Won't do, Done, Archived.
 - Facebook feed on the homepage — Page Plugin iframe, sized to container (up to 500px) via a guarded script in main.js so it never clips on mobile. Confirmed pulling live posts.
 - Design overhaul **iteration 1** — "warm & community" system pass (cream neutrals, larger radii, softer navy-tinted shadows, more section spacing). Applies site-wide via shared CSS. Direction chosen by client.
 
-## Design overhaul — remaining (TODO)
+## Design overhaul — status
 
-- Per-page content tightening (copy density, layout rhythm) building on the warm system.
-- Photography — pull usable images from Facebook; request specific shots from client for the gaps.
-- Hero + section-title refinement, warm accent (`--hhh-warm`) used tastefully.
+- **Done** — Homepage restructured (compact two-column hero, split sections, logo strip).
+- **Done** — Interior content pages restructured with a reusable `.two-col` wrapper (about, events, receiving-goods, monetary, current-needs, guidelines, volunteers) + two-column FAQ + tighter section padding. `get-involved-projects` (Simply Give, unlinked) and `get-involved-newsletter` (unlinked) left on the old structure since they're dormant.
+- **TODO** — Photography: pull usable images from Facebook; request specific shots from client for the gaps.
+- **TODO** — Optional: warm accent (`--hhh-warm`) used more, hero imagery.
 
 ## Blocked
 
