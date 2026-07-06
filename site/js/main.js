@@ -121,6 +121,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // Facebook Page Plugin — size the iframe to its container (up to 500px) so it never clips
+  (function() {
+    var wrap = document.querySelector('.fb-embed');
+    var iframe = wrap && wrap.querySelector('iframe');
+    if (!iframe) return;
+    function sizeFb() {
+      var w = Math.max(280, Math.min(500, Math.floor(wrap.clientWidth)));
+      var url = new URL(iframe.src);
+      if (parseInt(url.searchParams.get('width'), 10) === w) return;
+      url.searchParams.set('width', w);
+      iframe.setAttribute('width', w);
+      iframe.src = url.toString();
+    }
+    sizeFb();
+    var t;
+    window.addEventListener('resize', function() { clearTimeout(t); t = setTimeout(sizeFb, 250); });
+  })();
+
   // Active page highlighting
   var currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-desktop a, .nav-mobile a').forEach(function(link) {

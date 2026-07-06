@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:;Huron Helping Hands Food Pantry;;;
+FN:Huron Helping Hands Food Pantry
+ORG:Huron Helping Hands Food Pantry
+TEL;TYPE=WORK,VOICE:+14196160088
+TEL;TYPE=WORK,VOICE:+14193660524
+EMAIL;TYPE=INTERNET,WORK:huronfoodpantry@gmail.com
+ADR;TYPE=WORK:;;607 S. Main St;Huron;OH;44839;USA
+URL:https://www.huronhelpinghands.org
+NOTE:Food pantry serving Huron, Berlin Heights, and the 44839 area. Hours: Wed 9am-3pm, Thu 10am-2pm. General: 419-616-0088. Appointments: 419-366-0524.
+END:VCARD

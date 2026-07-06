@@ -35,7 +35,7 @@ docs/                          # Planning documents
 ```bash
 # Deploy to S3 (additive — `--delete` is blocked by the global safety guard;
 # to prune removed files, run the delete yourself on the admin profile)
-aws s3 sync site/ s3://www.huronhelpinghands.org/ --region us-east-2
+aws s3 sync site/ s3://www.huronhelpinghands.org/ --region us-east-2 --exclude ".DS_Store" --exclude "*/.DS_Store"
 
 # Invalidate CloudFront cache (once distribution is created)
 aws cloudfront create-invalidation --distribution-id ECK9AA6465NAB --paths "/*"

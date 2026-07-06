@@ -963,6 +963,21 @@ svg { flex-shrink: 0; }
 .sponsor-name { font-weight: 700; color: var(--hhh-navy); }
 .sponsor-desc { font-size: 0.88em; color: var(--color-text-muted); line-height: 1.4; }
 
+.fb-feed {
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: var(--space-2xl);
+}
+.fb-feed h2 { color: var(--hhh-navy); margin-bottom: 10px; }
+.fb-feed .intro { color: var(--color-text-muted); max-width: 560px; margin: 0 auto 24px; }
+.fb-embed { display: flex; justify-content: center; }
+.fb-embed iframe {
+  max-width: 100%;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+.fb-feed > p:last-child { margin-top: 18px; }
+
 /* ========================================
    EVENTS PAGE SPECIFICS
    ======================================== */
