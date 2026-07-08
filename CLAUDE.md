@@ -27,6 +27,11 @@ site/                          # Deploy target — all files here go to S3
 lambda/                        # Lambda function source
 ├── hhh-newsletter-signup.py   # Newsletter signup handler (Python 3.12)
 
+print-assets/                  # Print deliverables (NOT deployed) — logo master + QR/label PDFs
+├── hhh_transv2.png            # Transparent logo master (source for all logo assets)
+├── hhh-card-qr.pdf / .png     # /card QR — vector PDF + raster, center logo, ECC-H
+└── hhh-card-qr-labels-avery22805.pdf  # 24-up QR sticker sheet; print at 100%
+
 website/                       # OLD Squarespace code-block snippets (preserved for reference)
 docs/                          # Planning documents
 ```

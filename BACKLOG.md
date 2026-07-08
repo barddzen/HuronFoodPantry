@@ -18,6 +18,11 @@ Stage vocab: TODO, In progress, Blocked, Deferred, Won't do, Done, Archived.
 - Facebook feed on the homepage — Page Plugin iframe, sized to container (up to 500px) via a guarded script in main.js so it never clips on mobile. Confirmed pulling live posts.
 - Design overhaul **iteration 1** — "warm & community" system pass (cream neutrals, larger radii, softer navy-tinted shadows, more section spacing). Applies site-wide via shared CSS. Direction chosen by client.
 
+## Done — Batch 4 (2026-07-07)
+
+- **Logo swap — corrected hands.** The prior upscaled mark had AI-mangled fingers (two thumbs); replaced with new transparent master `print-assets/hhh_transv2.png`. Regenerated the webp set (header/card `hhh-logo-full.webp`, favicon `hhh-logo.webp`) + `hhh-logo.jpg` — deployed to S3, CloudFront-invalidated, verified live (byte-match). No HTML/CSS change: header + card already plate the logo on white.
+- **QR + print collateral for [/card](https://www.huronhelpinghands.org/card/).** Standalone QR — vector PDF (scales for print) + 2400px PNG, navy modules, center logo, error-correction H so the logo doesn't break decoding. Plus a 24-up **Avery 22805** label sheet (`hhh-card-qr-labels-avery22805.pdf`). All in `print-assets/` — local print deliverables, not deployed. Print at 100% / actual size. Real 22805 die verified (side margin 0.78125", col pitch 1.8125", top 0.5", row 1.7"); positions confirmed perfect on a test print.
+
 ## Design overhaul — status
 
 - **Done** — Homepage restructured (compact two-column hero, split sections, logo strip).
@@ -29,7 +34,6 @@ Stage vocab: TODO, In progress, Blocked, Deferred, Won't do, Done, Archived.
 
 - **CashApp/Venmo block** (monetary page): tap-to-pay deep-link buttons (primary on mobile) + QR with "tap vs scan" explainer. Waiting on handles + QR images.
 - **Meet the Team + volunteer spotlight.** Waiting on photos + bios.
-- **Logo upscale swap** (webp set + favicon + all refs). Waiting on the Gemini-upscaled asset.
 
 ## Client action
 
