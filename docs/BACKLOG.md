@@ -2,6 +2,8 @@
 
 Stage vocab: TODO, In progress, Blocked, Deferred, Won't do, Done, Archived.
 
+Mirrored in Todoist: **[Huron Food Pantry](https://app.todoist.com/app/project/6hHGxvXJfqJ7m98M)** — sections match the stages above. Keep the two in sync; `/done` reconciles them.
+
 ## In progress
 
 (none)
