@@ -16,7 +16,6 @@ Mirrored in Todoist: **[Huron Food Pantry](https://app.todoist.com/app/project/6
 
 - **Photography** (design overhaul): pull usable images from Facebook; request specific shots from client for the gaps.
 - **Optional design polish**: warm accent (`--hhh-warm`) used more, hero imagery.
-- **Current Needs date stale.** [ways-to-give-current-needs.html](../site/ways-to-give-current-needs.html) still reads "Last updated: January 2026." Refresh the list + date (address already updated).
 - **Client action — delete stray S3 object:** `aws s3 rm s3://www.huronhelpinghands.org/.DS_Store` (run on admin profile — deletes are blocked on the `claude` profile).
 - **Flag to confirm — Vine & Olive location.** Research places it in Sandusky (4917 Milan Rd), not Huron. Cards omit city so nothing wrong is shown, but confirm it's the intended sponsor.
 - **Flag to confirm — GFS** = Gordon Food Service, a national distributor (HQ Grand Rapids, MI) — included as supplier/sponsor.
@@ -35,6 +34,11 @@ Mirrored in Todoist: **[Huron Food Pantry](https://app.todoist.com/app/project/6
 (none)
 
 ## Done
+
+### Fall 2026 Simply Give + needs refresh (2026-09-16)
+
+- Simply Give campaign copy updated for Sept 27 – Dec 26, 2026 run: single Double Match Day (Sat Dec 12), partnering store Meijer Sandusky (4702 Milan Rd) — home banner, projects, events, monetary highlight. `CAMPAIGNS['simply-give']` flipped to `true`.
+- Current Needs refreshed per Pastor John: jelly, oatmeal, ramen, Hamburger Helper, mac & cheese, diced tomatoes, chicken broth added to Most Needed; peanut butter and cereal demoted. Date stamp → September 2026.
 
 ### Batch 1 (2026-07-06, deployed + verified live)
 
