@@ -2,7 +2,7 @@
 
 Stage vocab: In progress, To verify, TODO, Blocked, Deferred, Won't do, Done, Archived.
 
-Mirrored in Todoist: **[Huron Food Pantry](https://app.todoist.com/app/project/6hHGxvXJfqJ7m98M)** — sections match the stages above. Keep the two in sync; `/done` reconciles them.
+This doc is the only record of outstanding work. Todoist was retired 2026-09-17; the project's preserved records are in `docs/todoist-archive/huron-food-pantry.md` — read-only history, never edited, never re-imported. Stages in order: In progress / To verify / TODO / Blocked / Deferred / Won't do / Done / Archived. The `<!--td:id-->` markers are inert keys from the retirement.
 
 ## In progress
 
@@ -69,3 +69,21 @@ Mirrored in Todoist: **[Huron Food Pantry](https://app.todoist.com/app/project/6
 ## Archived
 
 (none)
+
+
+## Pulled from Todoist at retirement (2026-09-17)
+
+Rows below existed in the Todoist project with no keyed `<!--td:id-->` row in this doc. They are appended here rather than merged into the stage sections above so nothing is silently duplicated: fold each into its section (or strike it as a duplicate) on the next pass through this doc. Wording is Todoist's; full descriptions and comments are in `docs/todoist-archive/`.
+
+### TODO
+
+- **Photography pass: pull usable images from Facebook, request gap shots from client** — Design overhaul remainder *(Todoist TODO; p2; pulled at Todoist retirement 2026-09-17)* **Possible duplicate of:** “- **Photography** (design overhaul): pull usable images from Facebook; request specific sh”  <!--td:6hHH2cQvXgqvVQQM-->
+- **Use warm accent (--hhh-warm) more and add hero imagery** — Marked optional in the design overhaul status *(Todoist TODO; p2; pulled at Todoist retirement 2026-09-17)* **Possible duplicate of:** “- **Optional design polish**: warm accent (`--hhh-warm`) used more, hero imagery.”  <!--td:6hHH2cXgXqPH4F5v-->
+- **Refresh Current Needs list and stale date** — ways-to-give-current-needs.html still reads 'Last updated: January 2026' *(Todoist TODO; p2; pulled at Todoist retirement 2026-09-17)*  <!--td:6hHH2cfv6chhWW2M-->
+
+### Blocked
+
+- **Build CashApp/Venmo block on the monetary page** — Tap-to-pay deep links + QR with tap-vs-scan explainer; waiting on handles and QR images *(Todoist Blocked; p3; pulled at Todoist retirement 2026-09-17)* **Possible duplicate of:** “- **CashApp/Venmo block** (monetary page): tap-to-pay deep-link buttons (primary on mobile”  <!--td:6hHH2cRqf87Jm82v-->
+- **Add Meet the Team + volunteer spotlight** — Waiting on photos and bios *(Todoist Blocked; p3; pulled at Todoist retirement 2026-09-17)* **Possible duplicate of:** “- **Meet the Team + volunteer spotlight.** Waiting on photos + bios.”  <!--td:6hHH2cXX9wfqqFvv-->
+- **Delete stray S3 object .DS_Store from the site bucket** — Must run on the admin profile — deletes are blocked on the claude profile *(Todoist Blocked; p3; pulled at Todoist retirement 2026-09-17)*  <!--td:6hHH2ch4966WG5wM-->
+- **Confirm Vine & Olive is the intended sponsor** — Research places it in Sandusky (4917 Milan Rd), not Huron; cards omit city so nothing wrong is shown *(Todoist Blocked; p3; pulled at Todoist retirement 2026-09-17)* **Possible duplicate of:** “- **Flag to confirm — Vine & Olive location.** Research places it in Sandusky (4917 Milan ”  <!--td:6hHH2cmpr22J29xv-->
